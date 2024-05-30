@@ -1,0 +1,858 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/blog/styles.db1a45e710fcf993a8e2.css" id="gatsby-global-css">@font-face{font-family:Graphik Web;src:url(/blog/static/Graphik-Light-Web-9b74b1c27f56936967712e4a4904dfb4.eot);src:local("Graphik Light Web"),local("Graphik-Light-Web"),url(/blog/static/Graphik-Light-Web-9b74b1c27f56936967712e4a4904dfb4.eot?#iefix) format("embedded-opentype"),url(/blog/static/Graphik-Light-Web-d8779c11aa22adad8964e49103264872.woff) format("woff"),url(/blog/static/Graphik-Light-Web-621316c861608f9add878084deb6f0ae.ttf) format("truetype"),url(/blog/static/Graphik-Light-Web-e0d44524f2c10ad577fe317cafead2d6.svg#Graphik-Light) format("svg");font-weight:300;font-style:normal;font-stretch:normal}@font-face{font-family:Graphik Web;src:url(/blog/static/Graphik-Regular-Web-ba27d4e37674adcaeb55256433bd823d.eot);src:local("Graphik Regular Web"),local("Graphik-Regular-Web"),url(/blog/static/Graphik-Regular-Web-ba27d4e37674adcaeb55256433bd823d.eot?#iefix) format("embedded-opentype"),url(/blog/static/Graphik-Regular-Web-5b50a32f7fb79f61c327332f59c9a034.woff) format("woff"),url(/blog/static/Graphik-Regular-Web-70ac5c4e81f38391847af8efa3b7952e.ttf) format("truetype"),url(/blog/static/Graphik-Regular-Web-b936038e633c0ece4a142ac9d219ded4.svg#Graphik-Regular) format("svg");font-weight:400;font-style:normal;font-stretch:normal}@font-face{font-family:Graphik Web;src:url(/blog/static/Graphik-Medium-Web-9d1076f03cb3999e9c2ac33a6503be3b.eot);src:local("Graphik Medium Web"),local("Graphik-Medium-Web"),url(/blog/static/Graphik-Medium-Web-9d1076f03cb3999e9c2ac33a6503be3b.eot?#iefix) format("embedded-opentype"),url(/blog/static/Graphik-Medium-Web-320dfef11ff346be8471ce27b1ca7c9d.woff) format("woff"),url(/blog/static/Graphik-Medium-Web-f4bf4d53aedf028b5ff1513eee2dd797.ttf) format("truetype"),url(/blog/static/Graphik-Medium-Web-d92a58e99202047fe2aa5212f4f5f76b.woff2) format("woff2");font-weight:500;font-style:normal;font-stretch:normal}@font-face{font-family:Graphik Web;src:url(/blog/static/Graphik-Semibold-Web-d87c72851a3680b6fcc5215b537251fb.eot);src:local("Graphik Semibold Web"),local("Graphik-Semibold-Web"),url(/blog/static/Graphik-Semibold-Web-d87c72851a3680b6fcc5215b537251fb.eot?#iefix) format("embedded-opentype"),url(/blog/static/Graphik-Semibold-Web-df624eb2f9bebae33b815d661771ca6a.woff) format("woff"),url(/blog/static/Graphik-Semibold-Web-75764e46cc06aea27eb074f323d2aa32.ttf) format("truetype"),url(/blog/static/Graphik-Semibold-Web-15ec38be8d90612e2c7debad0dcff2c2.svg#Graphik-Semibold) format("svg");font-weight:600;font-style:normal;font-stretch:normal}@font-face{font-family:Graphik Web;src:url(/blog/static/Graphik-Bold-Web-001b976b578078cee39c0dd2505c911c.eot);src:local("Graphik Bold Web"),local("Graphik-Bold-Web"),url(/blog/static/Graphik-Bold-Web-001b976b578078cee39c0dd2505c911c.eot?#iefix) format("embedded-opentype"),url(/blog/static/Graphik-Bold-Web-56d9b651d3657f5c5c6aef7895ddaa1b.woff) format("woff"),url(/blog/static/Graphik-Bold-Web-35f0ec1bb91f196a0dcbabe5089325d3.ttf) format("truetype"),url(/blog/static/Graphik-Bold-Web-9012ea5220241f3b542ae7f4568f7c89.svg#Graphik-Bold) format("svg");font-weight:700;font-style:normal;font-stretch:normal}@font-face{font-family:IBM Plex Mono;font-style:normal;font-display:swap;font-weight:400;src:url(data:font/woff2;base64,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) format("woff2"),url(/blog/static/ibm-plex-mono-all-400-normal-dba8912c02e35697cd0ed69d265f69e2.woff) format("woff");unicode-range:u+0460-052f,u+1c80-1c88,u+20b4,u+2de0-2dff,u+a640-a69f,u+fe2e-fe2f}@font-face{font-family:IBM Plex Mono;font-style:normal;font-display:swap;font-weight:400;src:url(data:font/woff2;base64,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) format("woff2"),url(/blog/static/ibm-plex-mono-all-400-normal-dba8912c02e35697cd0ed69d265f69e2.woff) format("woff");unicode-range:u+0400-045f,u+0490-0491,u+04b0-04b1,u+2116}@font-face{font-family:IBM Plex Mono;font-style:normal;font-display:swap;font-weight:400;src:url(data:font/woff2;base64,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) format("woff2"),url(/blog/static/ibm-plex-mono-all-400-normal-dba8912c02e35697cd0ed69d265f69e2.woff) format("woff");unicode-range:u+0102-0103,u+0110-0111,u+0128-0129,u+0168-0169,u+01a0-01a1,u+01af-01b0,u+1ea0-1ef9,u+20ab}@font-face{font-family:IBM Plex Mono;font-style:normal;font-display:swap;font-weight:400;src:url(/blog/static/ibm-plex-mono-latin-ext-400-normal-c17d34bd0d22090674287a017778986b.woff2) format("woff2"),url(/blog/static/ibm-plex-mono-all-400-normal-dba8912c02e35697cd0ed69d265f69e2.woff) format("woff");unicode-range:u+0100-024f,u+0259,u+1e??,u+2020,u+20a0-20ab,u+20ad-20cf,u+2113,u+2c60-2c7f,u+a720-a7ff}@font-face{font-family:IBM Plex Mono;font-style:normal;font-display:swap;font-weight:400;src:url(/blog/static/ibm-plex-mono-latin-400-normal-80f6826acb2ee08e193cb21922e9f963.woff2) format("woff2"),url(/blog/static/ibm-plex-mono-all-400-normal-dba8912c02e35697cd0ed69d265f69e2.woff) format("woff");unicode-range:u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+2000-206f,u+2074,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd}</style><meta name="generator" content="Gatsby 2.32.13"/><title data-react-helmet="true">Frontend Design Patterns | Ramotion Branding Agency </title><link data-react-helmet="true" rel="canonical" href="https://www.ramotion.com/blog/frontend-design-patterns/"/><link data-react-helmet="true" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/file-icon-vectors@1.0.0/dist/file-icon-vivid.min.css"/><meta data-react-helmet="true" property="og:title" content="Frontend Design Patterns | Ramotion Branding Agency "/><meta data-react-helmet="true" name="twitter:title" content="Frontend Design Patterns | Ramotion Branding Agency "/><meta data-react-helmet="true" name="description" content="Knowing how to use design patterns makes your code cleaner and more understandable. This article teaches various frontend design patterns."/><meta data-react-helmet="true" property="og:description" content="Knowing how to use design patterns makes your code cleaner and more understandable. This article teaches various frontend design patterns."/><meta data-react-helmet="true" name="twitter:description" content="Knowing how to use design patterns makes your code cleaner and more understandable. This article teaches various frontend design patterns."/><meta data-react-helmet="true" name="twitter:site" content="@ramotion"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" property="article:modified_time" content="2024-02-21T11:56:02Z"/><meta data-react-helmet="true" property="article:published_time" content="2023-04-28T07:35:34Z"/><meta data-react-helmet="true" property="article:publisher" content="https://www.facebook.com/ramotion/"/><meta data-react-helmet="true" property="og:locale" content="en_EN"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:site_name" content="Web Design, UI/UX, Branding, and App Development Blog"/><meta data-react-helmet="true" property="og:image" content="https://www.datocms-assets.com/48294/1708516537-frontend-design-patterns.jpg?w=1000&amp;fit=max&amp;fm=jpg"/><meta data-react-helmet="true" name="twitter:image" content="https://www.datocms-assets.com/48294/1708516537-frontend-design-patterns.jpg?w=1000&amp;fit=max&amp;fm=jpg"/><meta data-react-helmet="true" property="og:image:width" content="1200"/><meta data-react-helmet="true" property="og:image:height" content="630"/><meta data-react-helmet="true" property="og:image:alt" content="Frontend Design Patterns"/><meta data-react-helmet="true" property="twitter:image:alt" content="Frontend Design Patterns"/><meta data-react-helmet="true" property="og:url" content="https://www.ramotion.com/blog/frontend-design-patterns/"/><script data-react-helmet="true" type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.ramotion.com/#organization",
+      "name": "Ramotion",
+      "url": "https://www.ramotion.com/",
+      "sameAs": [
+        "https://www.facebook.com/Ramotion/",
+        "https://www.instagram.com/ramotion/",
+        "https://www.linkedin.com/company/ramotion/",
+        "https://dribbble.com/Ramotion",
+        "https://www.behance.net/ramotion",
+        "https://www.awwwards.com/Ramotion/",
+        "https://github.com/Ramotion",
+        "https://twitter.com/ramotion"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.ramotion.com/#logo",
+        "url": "https://www.ramotion.com/apple-touch-icon-120x120.png",
+        "caption": "Ramotion"
+      },
+      "image": {
+        "@id": "https://www.ramotion.com/#logo"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.ramotion.com/#website",
+      "url": "https://www.ramotion.com/",
+      "name": "Ramotion",
+      "publisher": {
+        "@id": "https://www.ramotion.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.ramotion.com/blog/frontend-design-patterns/#webpage",
+      "url": "https://www.ramotion.com/blog/frontend-design-patterns/",
+      "inLanguage": "en-US",
+      "name": "The Most Common Frontend Design Patterns Explained",
+      "isPartOf": {
+        "@id": "https://www.ramotion.com/#website"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://www.ramotion.com/blog/frontend-design-patterns/#primaryimage",
+        "url": "https://www.ramotion.com/apple-touch-icon-120x120.png",
+        "caption": "Ramotion"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://www.ramotion.com/blog/frontend-design-patterns/#primaryimage"
+      },
+      "datePublished": "2023-04-28T07:35:34+00:00",
+      "dateModified": "2023-04-28T07:35:32+00:00",
+      "description": "The Most Common Frontend Design Patterns Explained"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://www.ramotion.com/blog/frontend-design-patterns/#article",
+      "isPartOf": {
+        "@id": "https://www.ramotion.com/blog/frontend-design-patterns/#webpage"
+      },
+      "author": {
+        "@id": "https://www.ramotion.com/#organization",
+        "name": "Ramotion"
+      },
+      "publisher": {
+        "@id": "https://www.ramotion.com/#organization"
+      },
+      "headline": "The Most Common Frontend Design Patterns Explained",
+      "datePublished": "2023-04-28T07:35:34+00:00",
+      "dateModified": "2023-04-28T07:35:32+00:00",
+      "mainEntityOfPage": "https://www.ramotion.com/blog/frontend-design-patterns/#webpage",
+      "image": {
+        "@id": "https://www.ramotion.com/blog/frontend-design-patterns/#primaryimage"
+      },
+      "keywords": ""
+    },
+    {
+      "@type": "FAQPage",
+      "isPartOf": {
+        "@id": "https://www.ramotion.com/blog/frontend-design-patterns/#article"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are design patterns in front-end?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A design pattern is a general reusable solution to a commonly occurring problem within a given context in software design. Patterns are not specific to any programming language or technology. They are useful when you want to solve a problem that occurs repeatedly in front-end development process. Design patterns are proven solutions to common software development problems. They provide a template for how to solve the problem and can be used in many different situations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do front-end developers need to know design patterns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on what you mean by 'front-end developer.' If you're referring to someone who creates HTML elements and CSS, then no—they don't need to know design patterns. But if you're talking about someone who writes JavaScript code, then yes, they do need to know design patterns — in fact, every javascript developer or any web developer does."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "item": {
+            "@id": "https://www.ramotion.com/",
+            "name": "Home"
+          },
+          "position": 1
+        },
+        {
+          "@type": "ListItem",
+          "item": {
+            "@id": "https://www.ramotion.com/blog/",
+            "name": "Blog"
+          },
+          "position": 2
+        },
+        {
+          "@type": "ListItem",
+          "item": {
+            "@id": "https://www.ramotion.com/blog/frontend-design-patterns/",
+            "name": "The Most Common Frontend Design Patterns Explained"
+          },
+          "position": 3
+        }
+      ]
+    }
+  ]
+}</script><style data-styled="" data-styled-version="5.3.11">.iTrmfk{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#191b1f;font-size:1.3rem;z-index:1000;margin-left:auto;}/*!sc*/
+@media (max-width:1200px){.iTrmfk{display:none;}}/*!sc*/
+data-styled.g1[id="sc-12635g5-0"]{content:"iTrmfk,"}/*!sc*/
+.jEHdWq{-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-overflow-scrolling:touch;margin-right:10px;white-space:nowrap;z-index:1000;}/*!sc*/
+.jEHdWq::-webkit-scrollbar{display:none;}/*!sc*/
+.jEHdWq ul{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;list-style:none;margin:0;padding:0;}/*!sc*/
+.jEHdWq ul li{position:relative;color:#292728;cursor:pointer;margin:0;font-size:16px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:12px 16px;}/*!sc*/
+.jEHdWq ul li:hover{color:#292728;}/*!sc*/
+.jEHdWq ul li:hover ul{top:100%;}/*!sc*/
+.jEHdWq ul li a,.jEHdWq ul li span{position:relative;display:block;color:#292728;-webkit-transition:opacity 0.35s ease-in-out;transition:opacity 0.35s ease-in-out;text-transform:none;}/*!sc*/
+.jEHdWq ul li a:hover,.jEHdWq ul li span:hover{opacity:1;color:#292728;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.jEHdWq ul li svg{margin:0;}/*!sc*/
+.jEHdWq ul li ul{position:absolute;-webkit-flex-flow:column wrap;-ms-flex-flow:column wrap;flex-flow:column wrap;top:-9999em;left:-24px;background:#fff;padding:24px 40px;border-radius:4px;border:1px solid rgba(20,20,20,0.12);min-width:100px;}/*!sc*/
+.jEHdWq ul li ul li{margin:0;padding:0;line-height:1.1;display:block;}/*!sc*/
+.jEHdWq ul li ul li:not(:first-child){margin-top:16px;}/*!sc*/
+.jEHdWq ul li ul li a{margin:0;padding:0;display:block;}/*!sc*/
+.jEHdWq ul li ul li a:hover{color:#0059C7;}/*!sc*/
+data-styled.g2[id="sc-12635g5-1"]{content:"jEHdWq,"}/*!sc*/
+.AeOnE{width:100%;background:#fff;position:fixed;top:72px;left:0;right:0;bottom:0;padding:0 0 50px;-webkit-transform:translateY(-150%);-ms-transform:translateY(-150%);transform:translateY(-150%);-webkit-transition:-webkit-transform 0.4s;-webkit-transition:transform 0.4s;transition:transform 0.4s;z-index:1;overflow-y:auto;}/*!sc*/
+@media (max-width:1200px){.AeOnE{-webkit-transform:translateY(-150%);-ms-transform:translateY(-150%);transform:translateY(-150%);}}/*!sc*/
+.AeOnE ul{list-style:none;margin:0;padding:0;}/*!sc*/
+.AeOnE ul li{text-align:left;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;}/*!sc*/
+.AeOnE ul li a,.AeOnE ul li span{color:#292728;display:block;font-weight:300;font-size:16px;line-height:50px;text-align:left;padding:0 20px;cursor:pointer;}/*!sc*/
+.AeOnE ul li a:hover,.AeOnE ul li span:hover{background:#f2f2f2;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+data-styled.g3[id="sc-ze6x76-0"]{content:"AeOnE,"}/*!sc*/
+.ffsvpn{display:none;border-bottom:1px solid #ddd;width:100%;}/*!sc*/
+data-styled.g4[id="sc-ze6x76-1"]{content:"ffsvpn,"}/*!sc*/
+.bObOrO{outline:none;border:none;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:40px;height:40px;border-radius:50%;background:transparent;display:none;position:relative;z-index:3;}/*!sc*/
+.bObOrO:before,.bObOrO:after{content:'';display:block;width:24px;height:2px;background:#1f1f1f;-webkit-transition:-webkit-transform 0.2s;-webkit-transition:transform 0.2s;transition:transform 0.2s;margin-left:-12px;position:absolute;top:50%;left:50%;}/*!sc*/
+.bObOrO:before{-webkit-transform:translateY(-7px);-ms-transform:translateY(-7px);transform:translateY(-7px);}/*!sc*/
+.bObOrO:after{-webkit-transform:translateY(7px);-ms-transform:translateY(7px);transform:translateY(7px);}/*!sc*/
+.bObOrO span{display:block;width:24px;height:2px;background:#1f1f1f;position:relative;-webkit-transition:opacity 0.2s;transition:opacity 0.2s;opacity:1;margin-left:-12px;position:absolute;top:50%;left:50%;}/*!sc*/
+@media (max-width:1200px){.bObOrO{display:block;}}/*!sc*/
+.bObOrO:active,.bObOrO:focus{outline:none;}/*!sc*/
+data-styled.g5[id="sc-ttsj1t-0"]{content:"bObOrO,"}/*!sc*/
+.cVsYWg{padding:12px 0;margin-right:34px;opacity:0.9;position:relative;z-index:3;}/*!sc*/
+@media (max-width:1200px){.cVsYWg{margin:0 auto;}}/*!sc*/
+@media (min-width:1600px){.cVsYWg{position:absolute;left:32px;}}/*!sc*/
+.cVsYWg:hover svg path{fill:#1f1f1f;}/*!sc*/
+.cVsYWg p{margin:0;}/*!sc*/
+.cVsYWg span{font-size:10px;font-weight:500;color:#929292;display:block;position:absolute;left:0;top:-1px;}/*!sc*/
+.cVsYWg svg{display:block;fill:#6e6e6e;}/*!sc*/
+.cVsYWg svg path{-webkit-transition:all 0.3s ease;transition:all 0.3s ease;}/*!sc*/
+data-styled.g6[id="sc-kazbgp-0"]{content:"cVsYWg,"}/*!sc*/
+.hYvHim{position:relative;background:#fff;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;z-index:1000;margin:0 auto;padding:12px 32px;width:100%;}/*!sc*/
+@media (max-width:1200px){.hYvHim{padding:12px 15px;}}/*!sc*/
+.hYvHim:before{content:'';background:#fff;position:absolute;left:0;top:0;bottom:0;right:0;z-index:2;}/*!sc*/
+data-styled.g7[id="sc-1v848in-0"]{content:"hYvHim,"}/*!sc*/
+.dAHMhL{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column wrap;-ms-flex-flow:column wrap;flex-flow:column wrap;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;color:#666;padding:96px 32px 32px;font-size:14px;position:relative;}/*!sc*/
+.dAHMhL:before{content:'';border-top:1px solid #ddd;width:100%;max-width:1040px;position:absolute;top:0;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);}/*!sc*/
+.dAHMhL a{color:#666;font-size:14px;}/*!sc*/
+.dAHMhL a:hover{-webkit-text-decoration:none;text-decoration:none;color:#1f1f1f;}/*!sc*/
+data-styled.g8[id="sc-1459zsh-0"]{content:"dAHMhL,"}/*!sc*/
+.jTAjgN{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;width:100%;max-width:1040px;margin:0 0 32px;color:#666;}/*!sc*/
+.jTAjgN p{text-align:center;color:#666;margin:0;width:70%;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;}/*!sc*/
+data-styled.g9[id="sc-1459zsh-1"]{content:"jTAjgN,"}/*!sc*/
+.iTydUz{display:grid;grid-template-columns:repeat(5,1fr);-webkit-column-gap:80px;column-gap:80px;margin:0 0 20px;}/*!sc*/
+@media (max-width:767px){.iTydUz{grid-template-columns:repeat(3,1fr);-webkit-column-gap:40px;column-gap:40px;}.iTydUz > div{margin:0 0 16px;}}/*!sc*/
+@media (max-width:480px){.iTydUz{grid-template-columns:repeat(2,1fr);}}/*!sc*/
+.iTydUz strong{display:block;text-transform:uppercase;font-weight:500;font-size:12px;line-height:1.1;color:#666;-webkit-letter-spacing:0.5px;-moz-letter-spacing:0.5px;-ms-letter-spacing:0.5px;letter-spacing:0.5px;margin:0 0 12px;}/*!sc*/
+.iTydUz ul{list-style:none;width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column wrap;-ms-flex-flow:column wrap;flex-flow:column wrap;margin:0;padding:0;}/*!sc*/
+.iTydUz li{margin:0 0 12px;line-height:1;}/*!sc*/
+.iTydUz a{font-size:14px;line-height:1.1;color:#292728;-webkit-letter-spacing:0;-moz-letter-spacing:0;-ms-letter-spacing:0;letter-spacing:0;}/*!sc*/
+.iTydUz a:hover{color:#1f1f1f;}/*!sc*/
+data-styled.g10[id="sc-1459zsh-2"]{content:"iTydUz,"}/*!sc*/
+*,*::before,*::after{box-sizing:border-box;}/*!sc*/
+html{font-size:62.5% !important;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);color:black;}/*!sc*/
+article,aside,figcaption,figure,footer,header,hgroup,main,nav,section{display:block;}/*!sc*/
+body{margin:0;font-family:Arial,Helvetica,sans-serif;font-size:1.6rem;font-weight:400;line-height:1.5;text-align:left;}/*!sc*/
+[tabindex="-1"]:focus{outline:0 !important;}/*!sc*/
+hr{box-sizing:content-box;height:0;overflow:visible;}/*!sc*/
+h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:0.5rem;}/*!sc*/
+p{margin-top:0;margin-bottom:1rem;}/*!sc*/
+abbr[title],abbr[data-original-title]{-webkit-text-decoration:underline;text-decoration:underline;-webkit-text-decoration:underline dotted;-webkit-text-decoration:underline dotted;text-decoration:underline dotted;cursor:help;border-bottom:0;-webkit-text-decoration-skip-ink:none;-webkit-text-decoration-skip-ink:none;text-decoration-skip-ink:none;}/*!sc*/
+address{margin-bottom:1rem;font-style:normal;line-height:inherit;}/*!sc*/
+ol,ul,dl{margin-top:0;margin-bottom:1rem;}/*!sc*/
+ol ol,ul ul,ol ul,ul ol{margin-bottom:0;}/*!sc*/
+dt{font-weight:700;}/*!sc*/
+dd{margin-bottom:.5rem;margin-left:0;}/*!sc*/
+blockquote{margin:0 0 1rem;}/*!sc*/
+b,strong{font-weight:bolder;}/*!sc*/
+small{font-size:80%;}/*!sc*/
+sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline;}/*!sc*/
+sub{bottom:-.25em;}/*!sc*/
+sup{top:-.5em;}/*!sc*/
+a{color:#007bff;-webkit-text-decoration:none;text-decoration:none;background-color:transparent;}/*!sc*/
+a:hover{color:#0056b3;-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+a:not([href]):not([tabindex]){color:inherit;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+a:not([href]):not([tabindex]):hover,a:not([href]):not([tabindex]):focus{color:inherit;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+a:not([href]):not([tabindex]):focus{outline:0;}/*!sc*/
+pre,code,kbd,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em;}/*!sc*/
+pre{margin-top:0;margin-bottom:1rem;overflow:auto;}/*!sc*/
+figure{margin:0 0 1rem;}/*!sc*/
+img{vertical-align:middle;border-style:none;}/*!sc*/
+svg{overflow:hidden;vertical-align:middle;}/*!sc*/
+table{border-collapse:collapse;}/*!sc*/
+caption{padding-top:0.75rem;padding-bottom:0.75rem;color:#6c757d;text-align:left;caption-side:bottom;}/*!sc*/
+th{text-align:inherit;}/*!sc*/
+label{display:inline-block;margin-bottom:0.5rem;}/*!sc*/
+button{border-radius:0;}/*!sc*/
+button:focus{outline:.1rem dotted;outline:.5rem auto -webkit-focus-ring-color;}/*!sc*/
+input,button,select,optgroup,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit;}/*!sc*/
+button,input{overflow:visible;}/*!sc*/
+button,select{text-transform:none;}/*!sc*/
+select{word-wrap:normal;}/*!sc*/
+button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button;}/*!sc*/
+button:not(:disabled),[type="button"]:not(:disabled),[type="reset"]:not(:disabled),[type="submit"]:not(:disabled){cursor:pointer;}/*!sc*/
+button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{padding:0;border-style:none;}/*!sc*/
+input[type="radio"],input[type="checkbox"]{box-sizing:border-box;padding:0;}/*!sc*/
+input[type="date"],input[type="time"],input[type="datetime-local"],input[type="month"]{-webkit-appearance:listbox;}/*!sc*/
+textarea{overflow:auto;resize:vertical;}/*!sc*/
+fieldset{min-width:0;padding:0;margin:0;border:0;}/*!sc*/
+legend{display:block;width:100%;max-width:100%;padding:0;margin-bottom:.5rem;font-size:1.5rem;line-height:inherit;color:inherit;white-space:normal;}/*!sc*/
+progress{vertical-align:baseline;}/*!sc*/
+[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto;}/*!sc*/
+[type="search"]{outline-offset:-.2rem;-webkit-appearance:none;}/*!sc*/
+[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}/*!sc*/
+::-webkit-file-upload-button{font:inherit;-webkit-appearance:button;}/*!sc*/
+output{display:inline-block;}/*!sc*/
+summary{display:list-item;cursor:pointer;}/*!sc*/
+template{display:none;}/*!sc*/
+[hidden]{display:none !important;}/*!sc*/
+data-styled.g11[id="sc-global-XmIJP1"]{content:"sc-global-XmIJP1,"}/*!sc*/
+html,body{font-family:'Graphik Web',Arial,Helvetica,sans-serif;font-size:16px;line-height:1.5;font-weight:400;font-style:normal;}/*!sc*/
+h1,h2,h3,h4,h5,figcaption{font-family:'Graphik Web',Arial,Helvetica,sans-serif;font-weight:600;}/*!sc*/
+h1,h2,h3{font-weight:700;}/*!sc*/
+ol{list-style-type:none;counter-reset:item;padding:0;margin:0;}/*!sc*/
+ol li{position:relative;counter-increment:item;margin:0 0 8px;font-size:18px;line-height:1.8;}/*!sc*/
+ol li::before{position:relative;display:inline-block;content:counter(item) '.';color:#141414;height:34px;min-width:24px;text-align:center;border-radius:50%;margin-right:8px;font-size:18px;font-weight:600;line-height:34px;}/*!sc*/
+@supports (font-variation-settings:normal){html,body{font-family:'Graphik Web',Arial,Helvetica,sans-serif;font-size:18px;line-height:1.8;font-weight:400;font-style:normal;-webkit-letter-spacing:-0.04em;-moz-letter-spacing:-0.04em;-ms-letter-spacing:-0.04em;letter-spacing:-0.04em;}}/*!sc*/
+*{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}/*!sc*/
+.mobile-nav-visible{overflow:hidden;}/*!sc*/
+data-styled.g12[id="sc-global-gJEFoK1"]{content:"sc-global-gJEFoK1,"}/*!sc*/
+.dHmOBZ{height:auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column wrap;-ms-flex-flow:column wrap;flex-flow:column wrap;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;max-width:100%;padding:0;z-index:100;}/*!sc*/
+data-styled.g13[id="sc-9laaq0-0"]{content:"dHmOBZ,"}/*!sc*/
+.bKnDjH{max-width:1080px;width:100%;margin:0 auto;position:relative;padding:0 20px;}/*!sc*/
+@media (max-width:1023px){.bKnDjH{max-width:680px;}}/*!sc*/
+.bKnDjH pre{background:rgba(0,0,0,0.1);padding:0.2rem 0.4rem;font-size:1.2rem;}/*!sc*/
+.bKnDjH button{font-weight:700;background:#191b1f;border:none;color:white;padding:0.35em 0.7em;margin-top:0.7em;}/*!sc*/
+data-styled.g15[id="sc-9laaq0-2"]{content:"bKnDjH,"}/*!sc*/
+.hFuKvm{font-size:48px;line-height:1.125;color:#1f1f1f;}/*!sc*/
+@media screen and (max-width:1024px){.hFuKvm{font-size:32px;}}/*!sc*/
+data-styled.g16[id="sc-9laaq0-3"]{content:"hFuKvm,"}/*!sc*/
+.iMCepu{width:100%;max-width:680px;}/*!sc*/
+@media (max-width:1023px){.iMCepu{max-width:100%;}}/*!sc*/
+data-styled.g21[id="sc-9laaq0-8"]{content:"iMCepu,"}/*!sc*/
+.cFLtEC{position:relative;margin:0 auto;padding:0 0 64px;min-height:230px;}/*!sc*/
+.cFLtEC h1,.cFLtEC h2,.cFLtEC h3{margin:0.5em 0 0.4em;color:#1f1f1f;}/*!sc*/
+.cFLtEC h1{font-size:48px;line-height:1.125;}/*!sc*/
+@media screen and (max-width:1024px){.cFLtEC h1{font-size:32px;}}/*!sc*/
+.cFLtEC h2{font-size:32px;line-height:1.68;}/*!sc*/
+@media screen and (max-width:1024px){.cFLtEC h2{font-size:28px;}}/*!sc*/
+.cFLtEC h3{font-size:24px;line-height:1.5;margin:40px 0 32px;}/*!sc*/
+.cFLtEC h4{font-size:20px;line-height:1.4;color:#000;margin:24px 0 16px;}/*!sc*/
+.cFLtEC h5{font-size:18px;line-height:1;color:#000;margin:24px 0 16px;}/*!sc*/
+.cFLtEC p{color:#1f1f1f;margin:0 0 16px;}/*!sc*/
+.cFLtEC a{color:#1f1f1f;word-break:break-word;box-shadow:inset 0 -1px 0 #15171a;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}/*!sc*/
+.cFLtEC a:hover{color:#3eb0ef;-webkit-text-decoration:none;text-decoration:none;box-shadow:inset 0 -1px 0 #3eb0ef;}/*!sc*/
+.cFLtEC ul{margin:0 0 16px;padding:0;list-style:none;}/*!sc*/
+.cFLtEC ul li{margin:0 0 8px;line-height:1.6;color:#141414;position:relative;padding:0 0 0 16px;}/*!sc*/
+.cFLtEC ul li::before{content:'';position:absolute;left:0;top:10px;width:8px;height:8px;background:#141414;border-radius:50%;}/*!sc*/
+.cFLtEC ul li:first-child{margin-top:0;}/*!sc*/
+.cFLtEC hr{position:relative;display:block;width:100%;margin:2em 0;padding:0;height:1px;border:0;border-top:1px solid #e3e9ed;}/*!sc*/
+.cFLtEC .gatsby-image-wrapper{border-radius:3px;}/*!sc*/
+.cFLtEC pre{background:none;border:none;padding:0;margin:0;}/*!sc*/
+.cFLtEC code{background:#f3f8fe;padding:4px 8px;border-radius:4px;border-left:none;max-width:100%;font-size:16px;line-height:1.6;color:#51668f;font-family:'IBM Plex Mono',monospace;white-space:pre-wrap;}/*!sc*/
+data-styled.g25[id="sc-9laaq0-12"]{content:"cFLtEC,"}/*!sc*/
+.bbyxHG{margin:2em 0;}/*!sc*/
+.bbyxHG figcaption{margin:1em auto 0;width:100%;display:block;text-align:center;color:#5d7179;font-size:75%;}/*!sc*/
+.bbyxHG figcaption a,.bbyxHG figcaption p{color:#5d7179;}/*!sc*/
+.bbyxHG img{margin:0 auto;max-width:100%;display:block;}/*!sc*/
+data-styled.g26[id="sc-9laaq0-13"]{content:"bbyxHG,"}/*!sc*/
+.lnPvgu{background:#f7f7f7;position:relative;padding:32px 40px;margin:36px 0;}/*!sc*/
+.lnPvgu:first-child{margin-top:0;}/*!sc*/
+.lnPvgu:last-child{margin-bottom:0;}/*!sc*/
+.lnPvgu h2{margin:0 0 24px;}/*!sc*/
+.lnPvgu h3{margin:0 0 16px;}/*!sc*/
+data-styled.g31[id="sc-9laaq0-18"]{content:"lnPvgu,"}/*!sc*/
+.hkRyuI{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;margin:0 0 64px;}/*!sc*/
+data-styled.g32[id="sc-9laaq0-19"]{content:"hkRyuI,"}/*!sc*/
+.fAsfbE{width:190px;font-size:16px;line-height:22px;color:#292728;font-family:'IBM Plex Mono',monospace;}/*!sc*/
+@media (max-width:1023px){.fAsfbE{width:100%;margin:0 0 16px;}}/*!sc*/
+data-styled.g33[id="sc-9laaq0-20"]{content:"fAsfbE,"}/*!sc*/
+.eDhJki{-webkit-text-decoration:none;text-decoration:none;color:#1f1f1f;}/*!sc*/
+.eDhJki:hover{-webkit-text-decoration:none;text-decoration:none;color:#006FF9;}/*!sc*/
+data-styled.g34[id="sc-9laaq0-21"]{content:"eDhJki,"}/*!sc*/
+.jaTTUu{width:calc(100% - 190px);}/*!sc*/
+@media (max-width:1023px){.jaTTUu{width:100%;}}/*!sc*/
+.jaTTUu h2,.jaTTUu .h2{display:block;font-size:20px;line-height:28px;font-weight:600;margin:0 0 16px;}/*!sc*/
+.jaTTUu section p{font-size:16px;line-height:22px;color:#292728;}/*!sc*/
+data-styled.g35[id="sc-9laaq0-22"]{content:"jaTTUu,"}/*!sc*/
+.pryet{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin:0 0 8px;font-family:'IBM Plex Mono',monospace;}/*!sc*/
+.sc-9laaq0-9 .sc-9laaq0-23{margin:0 0 16px;}/*!sc*/
+.pryet a{-webkit-text-decoration:none;text-decoration:none;font-size:16px;line-height:22px;color:#292728;margin-right:3px;box-shadow:none;}/*!sc*/
+.sc-9laaq0-9 .sc-9laaq0-23 a{color:#fff;}/*!sc*/
+.pryet a:hover{-webkit-text-decoration:none;text-decoration:none;box-shadow:none;color:#006FF9;}/*!sc*/
+.pryet a:not(:last-child):after{content:',';}/*!sc*/
+data-styled.g36[id="sc-9laaq0-23"]{content:"pryet,"}/*!sc*/
+.fDvTSr{width:100%;}/*!sc*/
+.fDvTSr p{color:#666;font-size:16px;line-height:22px;margin:0 0 8px;}/*!sc*/
+.fDvTSr svg{margin:0 8px 3px 0;}/*!sc*/
+.fDvTSr span a{color:#006FF9;font-weight:600;-webkit-text-decoration:none;text-decoration:none;box-shadow:none;}/*!sc*/
+.sc-9laaq0-9 .sc-9laaq0-24 span a{color:#fff;}/*!sc*/
+.fDvTSr span a:hover{box-shadow:none;color:#0059C7;}/*!sc*/
+.fDvTSr span + span{margin-left:8px;padding-left:12px;position:relative;}/*!sc*/
+.fDvTSr span + span:before{content:'';display:block;position:absolute;left:0;top:50%;width:4px;height:4px;background:#a8a8a8;border-radius:50%;margin-top:-2px;}/*!sc*/
+data-styled.g37[id="sc-9laaq0-24"]{content:"fDvTSr,"}/*!sc*/
+.hArNue{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;padding:64px 0 0;}/*!sc*/
+data-styled.g41[id="sc-9laaq0-28"]{content:"hArNue,"}/*!sc*/
+.fFNvcy{width:100%;max-width:320px;margin:0 0 0 40px;}/*!sc*/
+@media (max-width:1023px){.fFNvcy{max-width:100%;margin:0;}}/*!sc*/
+data-styled.g42[id="sc-9laaq0-29"]{content:"fFNvcy,"}/*!sc*/
+.bGnqXE{width:100%;padding:40px;margin:0 0 64px;background:#f7f7f7;}/*!sc*/
+@media (max-width:1023px){.bGnqXE{max-width:100%;margin:0 0 64px;}}/*!sc*/
+data-styled.g43[id="sc-9laaq0-30"]{content:"bGnqXE,"}/*!sc*/
+.iuwQDU{width:100%;padding:0;margin:0 0 64px;}/*!sc*/
+@media (max-width:1023px){.iuwQDU{max-width:100%;margin:0 0 64px;}}/*!sc*/
+data-styled.g44[id="sc-9laaq0-31"]{content:"iuwQDU,"}/*!sc*/
+.dPoLsb{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;padding:100px 0 48px;margin:0;width:100%;border-bottom:1px solid #c4c4c4;}/*!sc*/
+.sc-9laaq0-31 .sc-9laaq0-32{border-bottom:none;margin:0;padding:0;}/*!sc*/
+@media (max-width:680px){.dPoLsb{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}}/*!sc*/
+data-styled.g45[id="sc-9laaq0-32"]{content:"dPoLsb,"}/*!sc*/
+.cyoDRY{margin:0 24px 0 0;}/*!sc*/
+.sc-9laaq0-31 .sc-9laaq0-33{margin:0 16px 0 0;}/*!sc*/
+.cyoDRY > div{display:block !important;}/*!sc*/
+data-styled.g46[id="sc-9laaq0-33"]{content:"cyoDRY,"}/*!sc*/
+.jdPkNJ{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:0 0 32px;}/*!sc*/
+.sc-9laaq0-31 .sc-9laaq0-34{margin:0 0 16px;}/*!sc*/
+.sc-9laaq0-31 .sc-9laaq0-34 span{font-size:20px;line-height:1.4;font-weight:600;-webkit-text-decoration:none;text-decoration:none;color:#1f1f1f;}/*!sc*/
+data-styled.g47[id="sc-9laaq0-34"]{content:"jdPkNJ,"}/*!sc*/
+.gLluSr{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;margin:0;width:100%;max-width:680px;font-size:16px;}/*!sc*/
+.gLluSr p{color:#1f1f1f;}/*!sc*/
+.sc-9laaq0-31 .sc-9laaq0-35 h1,.sc-9laaq0-31 .gLluSr h2,.sc-9laaq0-31 .gLluSr h3{color:#1f1f1f;font-weight:600;line-height:1.5;}/*!sc*/
+.sc-9laaq0-31 .sc-9laaq0-35 h1{font-size:24px;line-height:1.5;}/*!sc*/
+.sc-9laaq0-31 .sc-9laaq0-35 h2{font-size:20px;line-height:1.4;}/*!sc*/
+.sc-9laaq0-31 .sc-9laaq0-35 h3{font-size:18px;line-height:1;}/*!sc*/
+.sc-9laaq0-31 .sc-9laaq0-35 p{color:#666;font-size:14px;line-height:22px;}/*!sc*/
+@media (max-width:500px){.gLluSr{margin:0;width:auto;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.gLluSr h2{text-align:center;}}/*!sc*/
+data-styled.g48[id="sc-9laaq0-35"]{content:"gLluSr,"}/*!sc*/
+.djNrIW p{font-size:14px;color:#6e6e6e;margin:0;}/*!sc*/
+.djNrIW p a{margin:0;position:relative;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.djNrIW p a:not(:first-child){margin-left:8px;padding-left:12px;position:relative;}/*!sc*/
+.djNrIW p a:not(:first-child):before{content:'';display:block;position:absolute;left:0;top:50%;width:4px;height:4px;background:#a8a8a8;border-radius:50%;margin-top:-2px;}/*!sc*/
+.sc-9laaq0-31 .sc-9laaq0-36 p{color:#1f1f1f;}/*!sc*/
+.sc-9laaq0-31 .sc-9laaq0-36 p a{color:#1f1f1f;margin:0 16px 0 0;padding-left:0;}/*!sc*/
+.sc-9laaq0-31 .sc-9laaq0-36 p a:before{display:none;}/*!sc*/
+.sc-9laaq0-31 .sc-9laaq0-36 p a:hover{color:#666;}/*!sc*/
+data-styled.g49[id="sc-9laaq0-36"]{content:"djNrIW,"}/*!sc*/
+.iWeAUa{background:#fff;min-height:100vh;}/*!sc*/
+data-styled.g50[id="sc-1yeamq7-0"]{content:"iWeAUa,"}/*!sc*/
+.cYNTMn{width:100%;}/*!sc*/
+data-styled.g51[id="sc-rgai7o-0"]{content:"cYNTMn,"}/*!sc*/
+.iJkLnY{width:100%;margin:0 0 40px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;border-bottom:1px solid #ddd;}/*!sc*/
+.iJkLnY span{padding:0 0 16px;margin:0;font-weight:600;color:#a8a8a8;cursor:pointer;position:relative;top:1px;font-size:16px;line-height:22px;min-width:70px;text-align:center;-webkit-flex:1 1 100%;-ms-flex:1 1 100%;flex:1 1 100%;}/*!sc*/
+.iJkLnY span.active{color:#1f1f1f;border-bottom:1px solid #1f1f1f;}/*!sc*/
+.iJkLnY span:hover{color:#1f1f1f;}/*!sc*/
+data-styled.g52[id="sc-rgai7o-1"]{content:"iJkLnY,"}/*!sc*/
+.bZejZN{width:100%;position:relative;}/*!sc*/
+.bZejZN ul{opacity:0;-webkit-transform:translateY(-9999em);-ms-transform:translateY(-9999em);transform:translateY(-9999em);position:absolute;top:0;list-style:none;margin:0;padding:0;visibility:hidden;}/*!sc*/
+.bZejZN ul.active{opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);position:relative;visibility:visible;}/*!sc*/
+.bZejZN ul li{margin:0 0 16px;line-height:1;}/*!sc*/
+.bZejZN ul a{color:#006FF9;font-size:16px;line-height:22px;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.bZejZN ul a:hover{color:#0059C7;}/*!sc*/
+.bZejZN ul a svg{margin:0 8px 0 0;position:relative;top:-2px;}/*!sc*/
+data-styled.g53[id="sc-rgai7o-2"]{content:"bZejZN,"}/*!sc*/
+.kfwOXV{background:#F2F8FF;padding:40px;margin:0 0 24px;border-radius:4px;}/*!sc*/
+.kfwOXV h3{font-size:24px;line-height:1.5;}/*!sc*/
+.kfwOXV p{font-size:14px;line-height:1.5;margin:0 0 24px;}/*!sc*/
+.kfwOXV form{margin:0;}/*!sc*/
+.kfwOXV label{display:block;margin:0;}/*!sc*/
+.kfwOXV input{width:100%;height:40px;border:1px solid #a8a8a8;border-radius:4px;background:white;margin:0 0 16px;padding:0 16px;font-size:16px;color:#1f1f1f;}/*!sc*/
+.kfwOXV input::-webkit-input-placeholder{color:#a8a8a8;opacity:1;}/*!sc*/
+.kfwOXV input::-moz-placeholder{color:#a8a8a8;opacity:1;}/*!sc*/
+.kfwOXV input:-ms-input-placeholder{color:#a8a8a8;opacity:1;}/*!sc*/
+.kfwOXV input::placeholder{color:#a8a8a8;opacity:1;}/*!sc*/
+.kfwOXV button{height:40px;background:#006FF9;color:white;font-size:16px;font-weight:normal;border-radius:4px;margin:0;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}/*!sc*/
+.kfwOXV button.full-width{width:100%;}/*!sc*/
+.kfwOXV button:hover{background:#0059C7;}/*!sc*/
+data-styled.g65[id="sc-jp1w58-0"]{content:"kfwOXV,"}/*!sc*/
+.iTPEMZ{display:grid;grid-template-columns:0.8fr 1fr;grid-gap:24px;}/*!sc*/
+.iTPEMZ.aside{grid-template-columns:1fr;grid-gap:0;}/*!sc*/
+@media (max-width:767px){.iTPEMZ{grid-template-columns:1fr;grid-gap:0;}}/*!sc*/
+data-styled.g66[id="sc-jp1w58-1"]{content:"iTPEMZ,"}/*!sc*/
+.biRQyk{display:grid;grid-template-columns:1fr;grid-gap:16px;}/*!sc*/
+.biRQyk input,.biRQyk button{margin:0;}/*!sc*/
+.biRQyk button{width:110px;}/*!sc*/
+.biRQyk.aside button{width:100%;}/*!sc*/
+data-styled.g67[id="sc-jp1w58-2"]{content:"biRQyk,"}/*!sc*/
+.hHJuBo{width:100%;margin:64px 0;position:relative;}/*!sc*/
+.hHJuBo code{display:block;background:#f3f8fe;padding:24px;border-radius:4px;border-left:68px solid #e7f0fa;max-width:100%;font-size:16px;line-height:1.6;color:#51668f;font-family:'IBM Plex Mono',monospace;white-space:pre-wrap;}/*!sc*/
+@media (max-width:767px){.hHJuBo code{border-left:16px solid #e7f0fa;}}/*!sc*/
+data-styled.g75[id="sc-6m6qu2-7"]{content:"hHJuBo,"}/*!sc*/
+.ihwHQC{position:absolute;right:24px;top:24px;color:#006FF9;font-size:16px;line-height:1.6;opacity:0;visibility:hidden;-webkit-transition:opacity 0.3s ease-in;transition:opacity 0.3s ease-in;}/*!sc*/
+.ihwHQC:hover{color:#0059C7;cursor:pointer;}/*!sc*/
+.sc-6m6qu2-7:hover .sc-6m6qu2-8{opacity:1;visibility:visible;}/*!sc*/
+data-styled.g76[id="sc-6m6qu2-8"]{content:"ihwHQC,"}/*!sc*/
+.gBWQgc{width:100%;padding:60px 0 0;}/*!sc*/
+.gBWQgc > h2{padding:0 0 16px;margin:0 0 64px;border-bottom:1px solid #ddd;}/*!sc*/
+data-styled.g81[id="sc-texgvn-0"]{content:"gBWQgc,"}/*!sc*/
+.ciFpRR{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 35px !important;padding:0;}/*!sc*/
+.ciFpRR li{padding:0 !important;margin:0 0 5px !important;color:#a8a8a8 !important;font-size:14px;line-height:1.1em !important;}/*!sc*/
+.ciFpRR li:before{display:none;}/*!sc*/
+.ciFpRR li a{color:#1f1f1f;-webkit-text-decoration:none;text-decoration:none;box-shadow:none;}/*!sc*/
+.ciFpRR li a:hover{color:#006FF9;box-shadow:none;}/*!sc*/
+.ciFpRR li span{padding:0 5px;display:inline-block;}/*!sc*/
+data-styled.g82[id="sc-1owolu7-0"]{content:"ciFpRR,"}/*!sc*/
+.eIDbus{padding:0;margin:0;color:#666;font-size:16px;line-height:22px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+.eIDbus p{color:#666;font-size:16px;line-height:22px;}/*!sc*/
+data-styled.g86[id="sc-1qyjknr-0"]{content:"eIDbus,"}/*!sc*/
+.KBFrG{width:55px;padding:0 5px 0 0;margin:0 0 16px;}/*!sc*/
+data-styled.g87[id="sc-1qyjknr-1"]{content:"KBFrG,"}/*!sc*/
+.eNnZT{width:calc(100% - 60px);}/*!sc*/
+.eNnZT a{-webkit-text-decoration:none;text-decoration:none;box-shadow:none;display:inline-block;margin:0 8px 8px 0;}/*!sc*/
+.eNnZT a:hover{box-shadow:none;}/*!sc*/
+.eNnZT a:hover svg path{fill:#006FF9;}/*!sc*/
+data-styled.g88[id="sc-1qyjknr-2"]{content:"eNnZT,"}/*!sc*/
+.kKxzWm{position:-webkit-sticky;position:sticky;top:16px;margin:0 0 64px;}/*!sc*/
+data-styled.g89[id="sc-etbsjb-0"]{content:"kKxzWm,"}/*!sc*/
+.jnUCHt{width:100%;margin:0 0 64px;}/*!sc*/
+.jnUCHt h2{font-weight:normal;font-size:18px;}/*!sc*/
+data-styled.g90[id="sc-etbsjb-1"]{content:"jnUCHt,"}/*!sc*/
+.fmvvvH{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column wrap;-ms-flex-flow:column wrap;flex-flow:column wrap;margin:0 0 64px;padding:0 0 56px;width:100%;border-bottom:1px solid #ddd;}/*!sc*/
+.fmvvvH h3{margin:0 0 16px;}/*!sc*/
+.fmvvvH ol{margin:0 0 0 16px;}/*!sc*/
+.fmvvvH ol li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+.fmvvvH ol li a{margin:1px 0 0;}/*!sc*/
+.fmvvvH a{color:#006FF9;box-shadow:none;}/*!sc*/
+.fmvvvH a:hover{color:#0059C7;box-shadow:none;}/*!sc*/
+data-styled.g91[id="sc-etbsjb-2"]{content:"fmvvvH,"}/*!sc*/
+.gzmqGV{border-top:1px solid #ddd;padding:32px 0 0;margin:32px 0 0;}/*!sc*/
+data-styled.g92[id="sc-etbsjb-3"]{content:"gzmqGV,"}/*!sc*/
+</style><link rel="sitemap" type="application/xml" href="/blog/sitemap.xml"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer', 'GTM-5R5XWTV');</script><link rel="icon" href="/blog/favicon-32x32.png?v=f610dccf305c55b7b0780155c02400c6" type="image/png"/><link rel="manifest" href="/blog/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#fff"/><link rel="apple-touch-icon" sizes="48x48" href="/blog/icons/icon-48x48.png?v=f610dccf305c55b7b0780155c02400c6"/><link rel="apple-touch-icon" sizes="72x72" href="/blog/icons/icon-72x72.png?v=f610dccf305c55b7b0780155c02400c6"/><link rel="apple-touch-icon" sizes="96x96" href="/blog/icons/icon-96x96.png?v=f610dccf305c55b7b0780155c02400c6"/><link rel="apple-touch-icon" sizes="144x144" href="/blog/icons/icon-144x144.png?v=f610dccf305c55b7b0780155c02400c6"/><link rel="apple-touch-icon" sizes="192x192" href="/blog/icons/icon-192x192.png?v=f610dccf305c55b7b0780155c02400c6"/><link rel="apple-touch-icon" sizes="256x256" href="/blog/icons/icon-256x256.png?v=f610dccf305c55b7b0780155c02400c6"/><link rel="apple-touch-icon" sizes="384x384" href="/blog/icons/icon-384x384.png?v=f610dccf305c55b7b0780155c02400c6"/><link rel="apple-touch-icon" sizes="512x512" href="/blog/icons/icon-512x512.png?v=f610dccf305c55b7b0780155c02400c6"/><link as="script" rel="preload" href="/blog/webpack-runtime-0ad7b3f700f1b1ef5e4b.js"/><link as="script" rel="preload" href="/blog/framework-8e528b732ab2eaadb7b7.js"/><link as="script" rel="preload" href="/blog/styles-755093da0c07f4b49226.js"/><link as="script" rel="preload" href="/blog/app-673598a3907a4a377bb0.js"/><link as="script" rel="preload" href="/blog/66f62df6fa27bfcb7e17e248d5ac90e5d7e55346-02138acb098fff078a7a.js"/><link as="script" rel="preload" href="/blog/component---src-templates-blog-post-js-12b8701d1645a9f9caa1.js"/><link as="fetch" rel="preload" href="/blog/page-data/frontend-design-patterns/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/sq/d/1201445096.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/sq/d/1648452821.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/sq/d/2692463864.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/sq/d/2884469105.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/blog/page-data/app-data.json" crossorigin="anonymous"/></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5R5XWTV" height="0" width="0" style="display: none; visibility: hidden" aria-hidden="true"></iframe></noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="sc-1yeamq7-0 iWeAUa"><header class="sc-1v848in-0 hYvHim"><button class="sc-ttsj1t-0 bObOrO"><span></span></button><a href="https://www.ramotion.com/" class="sc-kazbgp-0 cVsYWg"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.62" d="M12.046 0H4.5V24H19.5L13.7025 14.6769C17.0153 13.8462 19.5 10.9846 19.5 7.38462C19.5 3.32308 16.1871 0 12.046 0Z" fill="#292728"/>
+<path d="M4.5 24H19.5L4.5 0V24Z" fill="#292728"/>
+</svg></a><nav class="sc-12635g5-0 iTrmfk"><div class="sc-12635g5-1 jEHdWq"><ul><li><a href="https://www.ramotion.com/work/">Work</a></li><li><span>Services</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 12L4 7L12 7L8 12Z" fill="#292728"></path></svg><ul><li><a href="https://www.ramotion.com/app-design/">App design</a></li><li><a href="https://www.ramotion.com/branding/">Branding</a></li><li><a href="https://www.ramotion.com/design-systems/">Design system</a></li><li><a href="https://www.ramotion.com/web-app-development/">Web app development</a></li><li><a href="https://www.ramotion.com/web-design/">Web design</a></li><li><a href="https://www.ramotion.com/ui-ux-design/">UI/UX design</a></li></ul></li><li><a href="https://www.ramotion.com/about/">About</a></li><li><span>Industries</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 12L4 7L12 7L8 12Z" fill="#292728"></path></svg><ul><li><a href="https://www.ramotion.com/b2b-branding/">B2B</a></li><li><a href="https://www.ramotion.com/saas-branding/">SaaS</a></li><li><a href="https://www.ramotion.com/fintech-branding/">Fintech</a></li><li><a href="https://www.ramotion.com/cybersecurity-branding/">Cybersecurity</a></li><li><a href="https://www.ramotion.com/healthcare-branding/">Healthcare</a></li><li><a href="https://www.ramotion.com/startup-branding/">Startups</a></li></ul></li><li><a href="https://www.ramotion.com/blog/">Blog</a></li><li><a href="https://www.ramotion.com/contact/">Contact</a></li></ul></div></nav><div class="sc-ze6x76-0 AeOnE"><ul><li><a href="https://www.ramotion.com/work/">Work</a></li><li><span>Services</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 12L4 7L12 7L8 12Z" fill="#292728"></path></svg><ul class="sc-ze6x76-1 ffsvpn"><li><a href="https://www.ramotion.com/app-design/">App design</a></li><li><a href="https://www.ramotion.com/branding/">Branding</a></li><li><a href="https://www.ramotion.com/design-systems/">Design system</a></li><li><a href="https://www.ramotion.com/web-app-development/">Web app development</a></li><li><a href="https://www.ramotion.com/web-design/">Web design</a></li><li><a href="https://www.ramotion.com/ui-ux-design/">UI/UX design</a></li></ul></li><li><a href="https://www.ramotion.com/about/">About</a></li><li><span>Industries</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 12L4 7L12 7L8 12Z" fill="#292728"></path></svg><ul class="sc-ze6x76-1 ffsvpn"><li><a href="https://www.ramotion.com/b2b-branding/">B2B</a></li><li><a href="https://www.ramotion.com/saas-branding/">SaaS</a></li><li><a href="https://www.ramotion.com/fintech-branding/">Fintech</a></li><li><a href="https://www.ramotion.com/cybersecurity-branding/">Cybersecurity</a></li><li><a href="https://www.ramotion.com/healthcare-branding/">Healthcare</a></li><li><a href="https://www.ramotion.com/startup-branding/">Startups</a></li></ul></li><li><a href="https://www.ramotion.com/blog/">Blog</a></li><li><a href="https://www.ramotion.com/contact/">Contact</a></li></ul></div></header><main class="sc-9laaq0-0 dHmOBZ"><div class="sc-9laaq0-2 bKnDjH"><div class="sc-9laaq0-28 hArNue"><article class="sc-9laaq0-8 iMCepu"><section class="sc-9laaq0-12 cFLtEC"><div class="sc-etbsjb-1 jnUCHt"><ul class="sc-1owolu7-0 ciFpRR"><li><a href="https://www.ramotion.com/" title="Ramotion">Ramotion</a> <span>/</span></li><li><a href="/blog/">Blog</a> <span>/</span></li><li>The Most Common Frontend Design Patterns Explained</li></ul><div class="sc-9laaq0-23 pryet"><a href="/blog/tag/web-app-development/">Web App Development</a></div><h1 class="sc-9laaq0-3 hFuKvm">The Most Common Frontend Design Patterns Explained</h1><p>Knowing how to use design patterns makes your code cleaner and more understandable. This article teaches various frontend design patterns.</p><div class="sc-9laaq0-24 fDvTSr"><p><span>Written by <a href="/blog/author/ramotion/">Ramotion</a></span><span>Apr 28, 2023</span><span>22<!-- --> min read</span></p><p>Last updated: <!-- -->Feb 21, 2024</p></div></div><nav class="sc-etbsjb-2 fmvvvH"><h2>Table of Contents</h2><ol><li><a href="#section-defining-design-patterns-in-frontend-development">Defining Design Patterns in Frontend Development</a></li><li><a href="#section-frontend-design-patterns-categories">Frontend Design Patterns Categories</a></li><li><a href="#section-advantages-of-frontend-design-patterns">Advantages of Frontend Design Patterns</a></li><li><a href="#section-summary">Summary</a></li></ol></nav><div><p>Frontend design patterns are UX-related code solutions for dealing with specific situations. They're best practices and a good way to boost your skill set and design adeptness. One could argue that they aren't only for pros, as newcomers can get familiarized with them as well. Even if you're new in this field, it's still okay. In fact, now's the perfect time to start.</p>
+<p>The pattern is a reusable solution to a commonly occurring problem in software design. It's an approach or strategy that can be used in many different types of projects, on any scale or complexity. Design patterns are often not unique to front-end development but they can be applied here as well.</p>
+<p>Design patterns are essentially guides showing how the front end might be structured to solve common user problems. These design patterns exist to optimize work processes and make it easier for users to interface with the website and <a href="https://www.ramotion.com/web-app-development/">frontend development services</a> to build frontend applications with ease. There are many different types of design patterns and examples that exist. This article attempts to explain the most commonly used design patterns.</p></div><h2 class="anchored-heading" id="section-defining-design-patterns-in-frontend-development">Defining Design Patterns in Frontend Development</h2><div class="sc-9laaq0-18 lnPvgu featured-snippet"><h3>What are design patterns in front-end?</h3><div><p>A design pattern is a general reusable solution to a commonly occurring problem within a given context in software design. Patterns are not specific to any programming language or technology. They are useful when you want to solve a problem that occurs repeatedly in front-end development process. Design patterns are proven solutions to common software development problems. They provide a template for how to solve the problem and can be used in many different situations.</p></div></div><div><p>The idea behind a pattern is that you can use it as a template and adapt it to your particular problem. A pattern is not just an idea or an example of how something works; rather, it describes the problem in detail, along with its context and consequences. Then, the solution can be described in detail as well - including how it works and what tradeoffs to consider when using it.</p></div><figure class="sc-9laaq0-13 bbyxHG"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden"><div aria-hidden="true" style="width:100%;padding-bottom:56.25%"></div><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAVCAIAAAClsQv6AAAAAXNSR0IArs4c6QAAAiBJREFUSEu9lEtrFEEUhe+jqnt6MplHGGcUslASXAmJC92JuFDwT7j0zwmuXbjRhbhT8QkuEgiJZtITmM5Md7rrcaUdCW6ChWnyLauKOvdczr0oInC5KAijMJCV4M8pTzFcaUPDkuncf544hwQizgkjIP65KipvivLBBg8HCTP94yMADGzsUWYXhRl8/FJdX5+uDjq6PvQCkaKdvezli69xzE+fbPV7SWMupS4OwDhxIoJeoLLivGiFQKQ0e18/CgEDXU5m9mBmkYhQjJEkQudBM5Zlubufam5t3+iMhishjSUIAxFqH96Lq0vsJkQI7Zha5HaeP9v79uHaeDVEDwIb6wUWBmclENWhiVnySion0xPLuvP40f1PWe6DyycIoLTwY4GWdYm6AOUFE42KUEeMk6PVw+xhHMm8gDAUBKBJNgd1PObzqtXSPzOpbB2BrvLy6o2820Fme7XHd29BUy4B0WT54e6UT0s5yYcdjhT224zpMQ57vDH2mm06gwZd1uSnTqDTS2xejvpKcb0IfNxL3ztlDBOqfgcalRQerw2dN0zQ1WdTRSvt7r3t4++p2uy2t24CNDqXrl6vuJz2ZW6XVM6/fnuQ6OjO7WGkqUGXwLRUOdP6q2SlMiul8YGSBBcFk4hiBUXhIAyCC9OO1WgtOskNXJIkYhzz+nilqDxcjuRskqr5tMXOp/uBScTAd+fhrCME+b31SQWF8aKS/8EvPHX+W5OKotoAAAAASUVORK5CYII=" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="https://www.datocms-assets.com/48294/1682666659-frontend-design-patterns-1.png?auto=format&dpr=0.11&w=1920 200w,
+https://www.datocms-assets.com/48294/1682666659-frontend-design-patterns-1.png?auto=format&dpr=0.21&w=1920 400w,
+https://www.datocms-assets.com/48294/1682666659-frontend-design-patterns-1.png?auto=format&dpr=0.42&w=1920 800w,
+https://www.datocms-assets.com/48294/1682666659-frontend-design-patterns-1.png?auto=format&dpr=0.63&w=1920 1200w,
+https://www.datocms-assets.com/48294/1682666659-frontend-design-patterns-1.png?auto=format&dpr=0.84&w=1920 1600w,
+https://www.datocms-assets.com/48294/1682666659-frontend-design-patterns-1.png?auto=format&dpr=1&w=1920 1920w" sizes="(max-width: 800px) 100vw, 800px" /><img loading="lazy" sizes="(max-width: 800px) 100vw, 800px" srcset="https://www.datocms-assets.com/48294/1682666659-frontend-design-patterns-1.png?auto=format&dpr=0.11&w=1920 200w,
+https://www.datocms-assets.com/48294/1682666659-frontend-design-patterns-1.png?auto=format&dpr=0.21&w=1920 400w,
+https://www.datocms-assets.com/48294/1682666659-frontend-design-patterns-1.png?auto=format&dpr=0.42&w=1920 800w,
+https://www.datocms-assets.com/48294/1682666659-frontend-design-patterns-1.png?auto=format&dpr=0.63&w=1920 1200w,
+https://www.datocms-assets.com/48294/1682666659-frontend-design-patterns-1.png?auto=format&dpr=0.84&w=1920 1600w,
+https://www.datocms-assets.com/48294/1682666659-frontend-design-patterns-1.png?auto=format&dpr=1&w=1920 1920w" src="https://www.datocms-assets.com/48294/1682666659-frontend-design-patterns-1.png?auto=format" alt="" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div></figure><div><p>Patterns are not rules or laws. They’re not something that you can blindly follow and expect to get the desired result every time. Instead, they represent a set of tradeoffs for different situations. Patterns are about context: in order to use a pattern effectively, you need to understand what problem is being solved and how it fits with the rest of your system. Patterns are also not a substitute for good design. They provide a way of thinking, not writing code. Use them as a starting point to help guide your design decisions - but don’t stop there.</p>
+<p>When designing an application, it is important to have a good understanding of the business, user requirements, and available technologies. On the other hand, design patterns are not tied to specific technologies or platforms. Rather, they provide abstractions that can be used when developing the application. This makes them highly useful in all kinds of projects.</p>
+<p>Another advantage of using design patterns is that they make code more readable and maintainable. This is because the patterns are designed to solve certain problems in a generic way, so once you understand how they work, you can apply them to any situation.</p></div><h2 class="anchored-heading" id="section-frontend-design-patterns-categories">Frontend Design Patterns Categories</h2><div><p>Some popular design pattern categories:</p>
+<h3>Creational patterns</h3>
+<p><a href="https://en.wikipedia.org/wiki/Creational_pattern">Creational patterns</a> are concerned with object creation. They help programmers deal with the problem of how to instantiate objects in such a way that their instances can be configured according to an external specification. The two most common creational patterns are the factory pattern and the builder pattern. The factory pattern allows for a class to create an instance of another class without specifying the exact class to be instantiated.</p>
+<p>The purpose of creational design patterns is to create objects of a particular type in an easy and flexible manner. These patterns provide ways to instantiate objects without having to specify the exact class of object that should be created.</p>
+<p>The 6 types of creational design patterns are:</p>
+<h4>1. Factory Method pattern</h4>
+<p>The Factory Method pattern is an object creation mechanism that uses a factory method to encapsulate the logic for obtaining a specific type of object. This allows a single interface to be used to create many different types of objects.</p>
+<p>The basic idea behind this design pattern is that you have a base class with an abstract method (that is, a method without a body), which makes it possible for subclasses of this class to override this method and return an instance of their own subclass. The Factory Method will then call the overridden concrete implementation and return the created object.</p>
+<p><strong>Example:</strong></p></div><div id="copy" class="sc-6m6qu2-7 hHJuBo"><div><pre><code>class Robot {
+    constructor (name, phrase) {
+        this.name = name
+        this.phrase = phrase
+        this.model = "Tuv"
+    }
+    walk = () => console.log("Walking!!!")
+    sayPhrase = () => console.log(this.phrase)
+}
+
+const robot = new Robot("Olivia", "Hi, I'm Olivia!")
+console.log(robot.name) // output: "Olivia"
+</code></pre></div><span class="sc-6m6qu2-8 ihwHQC">Copy</span></div><div><h4>2. Abstract Factory pattern</h4>
+<p>In software engineering, the abstract factory pattern is a software design pattern that uses factory methods to deal with the problem of creating objects without having to specify their concrete classes. This is done by defining an interface for creating related objects and varying their implementation. Abstract factories are often used for creating families of related or dependent objects without specifying their concrete classes.</p>
+<p>The idea behind this pattern is to create an interface for creating families of related or dependent objects without specifying their concrete classes. This way, you can decouple the classes you want to create from the concrete classes themselves.</p>
+<p>An abstract factory is used when you have a family of similar or related objects, and you want a way to group and manage the family as one entity. Abstract Factory provides an interface for creating families of related or dependent objects without specifying their concrete classes.</p>
+<h4>3. Builder pattern</h4>
+<p>The builder pattern is used when we want to create complex objects but don’t want to expose the internals of those objects. The builder pattern allows for the creation of objects in steps, where each step returns a modified version of the final object.</p>
+<p>It centralizes all of the shared initialization logic into one location. This makes your code easier to maintain because you have fewer places where you need to perform this same initialization work.</p>
+<p><strong>Example:</strong> (Example taken from <a href="https://www.freecodecamp.org/news/javascript-design-patterns-explained/#singleton-pattern">freeCodeCamp</a>)</p></div><div id="copy" class="sc-6m6qu2-7 hHJuBo"><div><pre><code>// We declare our objects
+const bug1 = {
+    name: "Buggy McFly",
+    phrase: "Your debugger doesn't work with me!"
+}
+
+const bug2 = {
+    name: "Martiniano Buggland",
+    phrase: "Can't touch this! Na na na na..."
+}
+
+// These functions take an object as parameter and add a method to them
+const addFlyingAbility = obj => {
+    obj.fly = () => console.log(`Now ${obj.name} can fly!`)
+}
+
+const addSpeechAbility = obj => {
+    obj.saySmthg = () => console.log(`${obj.name} walks the walk and talks the talk!`)
+}
+
+// Finally we call the builder functions passing the objects as parameters
+addFlyingAbility(bug1)
+bug1.fly() // output: "Now Buggy McFly can fly!"
+
+addSpeechAbility(bug2)
+bug2.saySmthg() // output: "Martiniano Buggland walks the walk and talks the talk!"
+</code></pre></div><span class="sc-6m6qu2-8 ihwHQC">Copy</span></div><div><h4>4. Singleton Pattern</h4>
+<p>The singleton pattern is used when we want to restrict the instantiation of a class to one object. The singleton pattern ensures that only one instance of a class exists, and provides a global point of access to it.</p>
+<p>The common use of the Singleton pattern is for global access. You may have several classes that need access to the same resource, and it would be cumbersome if each instance had to check whether another instance already had it before acquiring it itself. Using a Singleton class, you can ensure that only one instance exists at any time, making it easier for clients to acquire the resource they require.</p>
+<p><strong>Example:</strong></p></div><div id="copy" class="sc-6m6qu2-7 hHJuBo"><div><pre><code>class Config {
+    constructor() {}
+    start(){ console.log('App has started') }  
+    update(){ console.log('App has updated') }
+}
+  
+const instance = new Config()
+Object.freeze(instance)
+</code></pre></div><span class="sc-6m6qu2-8 ihwHQC">Copy</span></div><div><h4>5. Prototype pattern</h4>
+<p>The Prototype design pattern is used to create a new instance of an object using a object prototype to do the actual creation. This pattern is useful when you have complex objects that have to be created and don’t want to create all the code required for your custom object at the same time.</p>
+<p>This is a very important concept in programming because it allows us to make changes without affecting other parts of our system. This makes it easier to update entire systems without affecting other parts of our system that we may not even be aware of yet!</p>
+<h4>6. Object Pool pattern</h4>
+<p>The object pool pattern is used when we want to minimize the usage of an expensive resource by recycling objects that are no longer in use. The object pool pattern maintains a pool of reusable objects and allows us to create new objects without incurring the cost of creating them from scratch each time.</p>
+<p>The main advantage of this pattern is that it reduces memory consumption by reusing objects instead of creating new ones every time they’re required. If you have ever used an IDE, you will notice that every time you compile your code, it takes quite some time to load all the classes into memory. The problem here is that each class has its own copy in memory, even if it doesn’t need one since it </p>
+<h3>Structural patterns</h3>
+<p><a href="https://en.wikipedia.org/wiki/Structural_pattern">Structural patterns</a> are a group of patterns that describe the relationships between entities and how those relationships should be formed. They help us to determine how our objects should interact with each other, which makes it easier for us to design clean and flexible systems.</p>
+<p>The structural design patterns are classic solutions to recurring problems in object-oriented systems. They help programmers to organize their code in a way that’s flexible and easy to maintain, even as the system evolves over time. Structural design patterns can be applied at different levels of abstraction, from low-level details of how classes are used to high-level organization of entire systems.</p>
+<p>The <strong>7 types</strong> of Structural design patterns:</p>
+<h4>1. Adapter pattern</h4>
+<p>Adapter pattern is a software design pattern that allows the interface of an existing class to be used as another interface. It is often used to make existing classes work with other classes without modifying the original class or to implement multiple inheritances in a way that does not require subclassing.</p>
+<p>The adapter pattern has two basic forms: class adapter and object adapter. The class adapter is applicable when you have a single interface that needs to be implemented by different classes. Object adapter is useful when you have one or more interfaces that need to be implemented by a single class.</p>
+<p><strong>Example:</strong></p></div><div id="copy" class="sc-6m6qu2-7 hHJuBo"><div><pre><code>function RedisDataManager() {
+    this.connect = function() {
+        console.log('Connect to database');
+    };
+    this.scan = function() {
+        return 'Data from database';
+    };
+}
+function DataManager() {
+    this.getData = function() {
+        return 'Legacy data';
+    }
+}
+function Adapter() {
+    var redis = new RedisDataManager();
+    redis.connect();
+    this.getData = function() {
+        return redis.scan();
+    }
+}
+function Client(dataManager) {
+    console.log(dataManager.getData());
+}
+var client = new Client(new Adapter());
+</code></pre></div><span class="sc-6m6qu2-8 ihwHQC">Copy</span></div><div><h4>2. Bridge pattern</h4>
+<p>Bridge design pattern allows you to decouple an abstraction from its implementation so that the two can vary independently. It's particularly useful when the code that uses an abstraction layer may need to be changed, but the actual code implementing that abstraction should not.</p>
+<p>The Bridge pattern can be implemented using inheritance. The primary goal of this pattern is to reduce coupling between classes that have strong dependencies on each other by introducing a new class in between them as a mediator or “bridge” between these classes. The bridge class implements both interfaces and forwards requests from one interface to another through method calls. This way, both interfaces remain independent because they don't have any knowledge of each other and no direct coupling exists between them.</p>
+<p><strong>Example:</strong></p></div><div id="copy" class="sc-6m6qu2-7 hHJuBo"><div><pre><code>// input devices
+
+function Gestures(output) {
+    this.output = output;
+
+    this.tap = function () { this.output.click(); }
+    this.swipe = function () { this.output.move(); }
+    this.pan = function () { this.output.drag(); }
+    this.pinch = function () { this.output.zoom(); }
+};
+
+function Mouse(output) {
+    this.output = output;
+
+    this.click = function () { this.output.click(); }
+    this.move = function () { this.output.move(); }
+    this.down = function () { this.output.drag(); }
+    this.wheel = function () { this.output.zoom(); }
+};
+
+// output devices
+
+function Screen() {
+    this.click = function () { console.log("Screen select"); }
+    this.move = function () { console.log("Screen move"); }
+    this.drag = function () { console.log("Screen drag"); }
+    this.zoom = function () { console.log("Screen zoom in"); }
+};
+
+function Audio() {
+    this.click = function () { console.log("Sound oink"); }
+    this.move = function () { console.log("Sound waves"); }
+    this.drag = function () { console.log("Sound screetch"); }
+    this.zoom = function () { console.log("Sound volume up"); }
+};
+
+function run() {
+
+    var screen = new Screen();
+    var audio = new Audio();
+    
+    var hand = new Gestures(screen);
+    var mouse = new Mouse(audio);
+
+    hand.tap(); // Screen select
+    hand.swipe(); // Screen move
+    hand.pinch(); // Screen zoom in
+
+    mouse.click(); // Sound oink
+    mouse.move(); // Sound waves
+    mouse.wheel(); // Sound volume up
+}
+</code></pre></div><span class="sc-6m6qu2-8 ihwHQC">Copy</span></div><div><h4>3. Composite pattern</h4>
+<p>The Composite Pattern is used to represent tree structure. The composite pattern defines a hierarchy of classes, called composite classes, whose instances are responsible for handling the details of data storage and retrieval for their parent and child function nodes in the tree structure.</p>
+<p>The main idea behind the Composite Pattern is to have a base object that holds some kind of reference to other objects. These other objects are called leaf nodes and they cannot contain any references themselves.</p>
+<h4>4. Decorator pattern</h4>
+<p>A decorator is an object that wraps a target object and adds additional functionality or information to it. The decorator pattern lets you dynamically change an object's behavior at run time by wrapping it in an object of a decorator class. The decorator has no knowledge of the internals of the original object; instead, it simply wraps the original and provides additional functionality.</p>
+<p>The decorator pattern is very similar to JavaScript inheritance, but instead of subclassing and extending functionality, it wraps objects in order to provide additional functionality. This can be useful when we want to add additional responsibilities to an existing object without having to inherit from it.</p>
+<p>Decorator patterns are very useful when you want to add some specific functionality to your functions or methods. The decorator pattern uses an object-oriented programming approach where you pass function (decorated function) as an argument to another function which then wraps the original function with new additional logic before returning it.</p>
+<p><strong>Example:</strong></p></div><div id="copy" class="sc-6m6qu2-7 hHJuBo"><div><pre><code>function User(name) {
+    this.name = name;
+
+    this.say = function () {
+        console.log("User: " + this.name);
+    };
+}
+
+function DecoratedUser(user, street, city) {
+    this.user = user;
+    this.name = user.name;  // ensures interface stays the same
+    this.street = street;
+    this.city = city;
+
+    this.say = function () {
+        console.log("Decorated User: " + this.name + ", " +
+            this.street + ", " + this.city);
+    };
+}
+
+function run() {
+
+    var user = new User("Olivia");
+    user.say(); // User: Olivia
+
+    var decorated = new DecoratedUser(user, "Broadway", "New York");
+    decorated.say(); // Decorated User: Olivia, Broadway, New York
+}
+</code></pre></div><span class="sc-6m6qu2-8 ihwHQC">Copy</span></div><div><h4>5. Flyweight pattern</h4>
+<p>The Flyweight design pattern is a software design pattern that allows the same instance of an object to be used many times in a computer application. This is done by sharing the actual object in a flyweight factory or cache, rather than creating new copies as needed. The flyweight object can then act as a master for creating lightweight representations. This saves memory and time during the creation of objects. It is useful when there are many similar objects but only one of these objects is needed at any given time.</p>
+<p>A flyweight acts as a shared instance for a set of objects, so that these objects can be accessed without creating redundant copies. The flyweight pattern provides a way to create objects that are not necessarily unique, such as those representing commonly used items like strings and images.</p>
+<p>The flyweight pattern is ideal when you need to create many instances of an object but don't want to pay the price of creating many separate copies of its underlying data structure. It's also useful when you need to keep track of many active instances (for example, when performing service transactions).</p>
+<h4>6. Facade pattern</h4>
+<p>A facade is an object that provides a simplified interface to a larger body of code, such as a class library. The facade can be used to provide easier access to the subsystem, or it may be intended as a simpler front end to a more complex subsystem.</p>
+<p>The Facade pattern is useful when you want to provide a simple interface to a complex subsystem. It can be used when you have several related classes that are difficult to use correctly and you want to provide simpler access to these classes.</p>
+<h4>7. Proxy pattern</h4>
+<p>A proxy pattern is an object that acts as a proxy for the real subject. It provides a different interface than the real subject, and it can also keep a transient state that is not shared with the real subject.</p>
+<p>The Proxy class implements the same interface as its namesake, but it's also used to encapsulate a reference to another object and provide indirect access to it. This allows for greater flexibility in how you interact with the object and improves code reuse.</p>
+<h3>Behavioral patterns</h3>
+<p><a href="https://en.wikipedia.org/wiki/Behavioral_pattern">Behavioral design patterns</a> are a way of decoupling the presentation from the business logic by isolating the behavior into its own class. This way, we can change the implementation without affecting any other part of our application.</p>
+<p>There are several behavioral design patterns deal with separating our code into smaller, more manageable chunks:</p>
+<h4>1. Chain of Responsibility Pattern</h4>
+<p>The Chain of Responsibility pattern describes how to pass a request between a chain of processing objects. It's useful when you have a large object hierarchy, and you don't want to hard-code the names of intermediate classes in your client code.</p>
+<p>The Chain of Responsibility Pattern is useful when your application has multiple objects that must cooperate to complete a task and you want to ensure that each object in the chain is only asked for help when it can provide assistance. It's also an alternative to using multiple inheritance.</p></div><div id="copy" class="sc-6m6qu2-7 hHJuBo"><div><pre><code>function Request(amount) {
+    this.amount = amount;
+    console.log("Requested: $" + amount + "\n");
+}
+
+Request.prototype = {
+    get: function (bill) {
+        var count = Math.floor(this.amount / bill);
+        this.amount -= count * bill;
+        console.log("Dispense " + count + " $" + bill + " bills");
+        return this;
+    }
+}
+function run() {
+    var request = new Request(378);
+
+    request.get(100).get(50).get(20).get(10).get(5).get(1);
+}
+</code></pre></div><span class="sc-6m6qu2-8 ihwHQC">Copy</span></div><div><p>Above code outputs:</p></div><div id="copy" class="sc-6m6qu2-7 hHJuBo"><div><pre><code>Requested: $378
+Dispense 3 $100 bills
+Dispense 1 $50 bills
+Dispense 1 $20 bills
+Dispense 0 $10 bills
+Dispense 1 $5 bills
+Dispense 3 $1 bills
+</code></pre></div><span class="sc-6m6qu2-8 ihwHQC">Copy</span></div><div><h4>2. Command Pattern</h4>
+<p>The command pattern allows a sender to encapsulate a command request as an object, thereby letting the receiver decide how to execute the command at a later time. This lets you decouple the sender from the receiver, which increases flexibility in your system.</p>
+<p>The Command pattern has three main classes: the invoker, the receiver, and the command. The invoker is responsible for creating and executing commands. It can also be used to queue commands for later execution or undo commands that have already been executed. The receiver is responsible for receiving and processing a particular command. This can be done by delegating to another class or method in your application. Finally, the command itself is an interface or abstract class that contains a method with no parameters that returns void. The command also contains any parameters needed to execute it such as data types of input and output parameters.</p>
+<h4>3. Interpreter Pattern</h4>
+<p>Interpreter Pattern is a design pattern that allows the creation of language-independent software. It provides an interface to evaluate and execute multiple languages. The Interpreter Pattern makes use of rules and grammar to translate the user input to the output.</p>
+<p>Interpreters are used in many applications that need to evaluate complex commands or expressions. They're also used to parse input strings into data structures such as trees or graphs. The expression evaluator is one of the simplest examples of an interpreter, but it's also available in many languages and frameworks as part of their standard library.</p>
+<h4>4. Iterator Pattern</h4>
+<p>The Iterator Pattern is a design pattern that allows you to sequentially access the elements of a container. It also allows you to traverse the elements in either direction, and it lets you remove elements from the container while you’re iterating over it. The iterator itself is responsible for generating the next element in the sequence.</p>
+<p>It is used when you have an object that acts as a container for other objects. You need to provide an interface that allows users to traverse or iterate over the elements of this collection. The Iterator interface provides a simple protocol for traversing and exposing the elements of a collection, without requiring any of its clients to be aware of its concrete implementation.</p>
+<p><strong>Example:</strong></p></div><div id="copy" class="sc-6m6qu2-7 hHJuBo"><div><pre><code>function Iterator(items) {
+    this.index = 0;
+    this.items = items;
+}
+
+Iterator.prototype = {
+    first: function () {
+        this.reset();
+        return this.next();
+    },
+    next: function () {
+        return this.items[this.index++];
+    },
+    hasNext: function () {
+        return this.index &#x3C;= this.items.length;
+    },
+    reset: function () {
+        this.index = 0;
+    },
+    each: function (callback) {
+        for (var item = this.first(); this.hasNext(); item = this.next()) {
+            callback(item);
+        }
+    }
+}
+
+function run() {
+
+    var items = ["one", 2, "circle", true, "Applepie"];
+    var iter = new Iterator(items);
+
+    // using for loop
+
+    for (var item = iter.first(); iter.hasNext(); item = iter.next()) {
+        console.log(item);
+    }
+    console.log("");
+
+    // using Iterator's each method
+
+    iter.each(function (item) {
+        console.log(item);
+    });
+}
+</code></pre></div><span class="sc-6m6qu2-8 ihwHQC">Copy</span></div><div><h4>5. Mediator Pattern</h4>
+<p>The Mediator pattern is a software design pattern, used to reduce coupling and increase flexibility by introducing a third-party object that mediates access between two or more objects. A mediator behaves as a proxy for the objects it coordinates, shielding them from each other. The mediator may also shield the software system from changes in the subsystems it coordinates. The mediator plays an important role in keeping the system loosely coupled, decoupling the various elements of the system so that they are easier to maintain and replace.</p>
+<p>The core idea behind the Mediator Pattern is that there should be only one instance of the mediator class for each number of objects being mediated. The mediator class acts as an interface between objects and delegates method calls to them.</p>
+<h4>6. Memento Pattern</h4>
+<p>Memento pattern can be used to create a simple version of the State (of an object) and restore it at a later time. It is one of the twenty-three well-known GoF design patterns that describe how to solve recurring design problems to design flexible and reusable object-oriented software, that is, objects that are easier to implement, change, test, and reuse.</p>
+<p>A Memento is an object that stores state information about another object in such a way that the original object can be restored. A memento can be thought of as a backup copy of the original data. It may contain additional information about the state of an object, such as the time at which it was stored, but does not contain any references to other objects or resources outside itself.</p>
+<p>In addition to saving and restoring state, a memento can also help you avoid unnecessary repetition of code. For example, if you have an object that represents a person or any entity that has properties like name, age, email address, etc., then if you want to display all these properties in HTML table format (i.e. row per property), then instead of repeating code everywhere where this table needs to be displayed, you just need to create a single method which will return desired HTML table based on input parameters (i.e., values for each property).</p>
+<h4>7. Observer Pattern</h4>
+<p>The Observer Pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods. This allows the subject to broadcast changes to a number of dependents without knowing anything about them or how they will use the information.</p>
+<p>The idea behind this pattern is to provide a single centralized interface for objects to register with so that these objects can be easily plugged into the system at run time. The observer may be registered with multiple subjects and will receive notifications from each subject even if they are not related to each other.</p>
+<h4>8. State Pattern</h4>
+<p>The State Pattern defines a way to encapsulate the concept of "state" in an object, and transition between states. An object can be in one of several different states, and it changes its behavior depending on what state it is in. This pattern allows you to vary behavior in response to external events without changing the code that implements your objects' behaviors.</p>
+<p>The concept of State Pattern can be explained with an example. Consider a class called “Car” which has some states like “started”, “stopped”, “idling” etc. In this case, an instance of a Car can have any one of these states at any given time. Now consider another class called “Driver” who drives the car by controlling its speed and direction and hence needs to know about all possible states of the car so that he can control it appropriately in each state. This is where State Pattern comes into the picture where we create a separate interface for each possible state and extend it from our main interface which has all common methods and properties like start(), stop(), etc.</p>
+<h4>9. Strategy Pattern</h4>
+<p>Strategy Pattern is a design pattern that provides the ability to change the behavior of an algorithm at runtime. It allows you to write a family of algorithms, each of which is encapsulated in an object, and have all algorithms in the family share a common interface. This means that you can change the implementation of a group of algorithms without changing any code outside the group. The Strategy Pattern is one of the most popular design patterns among software developers and has been used by many major software companies including Microsoft, Google, Facebook, and many others.</p>
+<p>This is achieved by encapsulating multiple algorithms (Strategies) in a single interface, then dynamically selecting the algorithm at runtime based on the context of the request.</p>
+<p>The advantage of this pattern is that it allows you to change the behavior of your application without having to modify existing code. This makes this pattern particularly useful when developing a component that needs to be highly configurable.</p>
+<h4>10. Template Pattern</h4>
+<p>Template Pattern is a design pattern that describes how to instantiate one or more objects based on the same template. This pattern is commonly used to simplify the creation of many similar instances, where the exact properties of these objects may not be known until runtime. It's also used when you need to create many similar objects with only a few properties that differ between them.</p>
+<p>The template doesn't contain any data, but it does contain fields that other code can use to store data. When you use the template to create an instance of an object, you provide the data for those fields in the constructor.</p>
+<p>The advantage of this approach is that it allows you to create different kinds of objects without changing your source code. For example, if we have a template for a Car object, it will support all kinds of cars: Volkswagens, Porsches, and even Ferraris.</p>
+<p><strong>Example:</strong></p></div><div id="copy" class="sc-6m6qu2-7 hHJuBo"><div><pre><code>var datastore = {
+    process: function () {
+        this.connect();
+        this.select();
+        this.disconnect();
+        return true;
+    }
+};
+
+function inherit(proto) {
+    var F = function () { };
+    F.prototype = proto;
+    return new F();
+}
+
+function run() {
+    var mySql = inherit(datastore);
+
+    // implement template steps
+
+    mySql.connect = function () {
+        console.log("MySQL: connect step");
+    };
+
+    mySql.select = function () {
+        console.log("MySQL: select step");
+    };
+
+    mySql.disconnect = function () {
+        console.log("MySQL: disconnect step");
+    };
+
+    mySql.process();
+}
+</code></pre></div><span class="sc-6m6qu2-8 ihwHQC">Copy</span></div><div><p>Above code outputs:</p></div><div id="copy" class="sc-6m6qu2-7 hHJuBo"><div><pre><code>MySQL: connect step
+MySQL: select step
+MySQL: disconnect step
+</code></pre></div><span class="sc-6m6qu2-8 ihwHQC">Copy</span></div><h2 class="anchored-heading" id="section-advantages-of-frontend-design-patterns">Advantages of Frontend Design Patterns</h2><div><ul>
+<li>Frontend design patterns allow you to organize your code into cohesive, reusable object oriented software. This is especially important when working on large-scale websites where there are many developers working together on different components of the site. By using design patterns, you can ensure that all developers are following a common set of guidelines and conventions for writing code.</li>
+<li>When you use design patterns, you can write code that’s easier to understand and maintain. They also improve code quality. This makes it much easier to add new features or fixes bugs in your site because the code is organized in a way that makes it easy to find what you’re looking for (and where).</li>
+<li>The main goal of front-end development is to create an attractive and intuitive interface for users. But there are many other challenges that need to be addressed in this process. For example, there is a need to ensure consistency across all components and pages in your application — otherwise, it would be difficult for users to find their way around the website or app.</li>
+<li>Frontend design patterns can help you with this task. They help you make sure that all components fit together seamlessly and follow similar rules when it comes to colors, fonts, or layouts. When used properly, frontend design patterns also make the code easier to read and understand for other developers who might join the project later on.</li>
+<li>Frontend design patterns can also help you create a consistent user experience throughout your application. This means that users will be able to navigate through the website or app without thinking too hard about how they do it.</li>
+</ul></div><div class="sc-9laaq0-18 lnPvgu featured-snippet"><h3>Do front-end developers need to know design patterns?</h3><div><p>It depends on what you mean by "front-end developer." If you're referring to someone who creates HTML elements and CSS, then no—they don't need to know design patterns. But if you're talking about someone who writes JavaScript code, then yes, they do need to know design patterns — in fact, every javascript developer or any web developer does.</p></div></div><h2 class="anchored-heading" id="section-summary">Summary</h2><div><p>Design patterns are tried-and-true fixes for typical issues in software development. They offer a model for how to address the issue and are applicable in a variety of circumstances. A design pattern addresses the problem in-depth, complete with its context and effects, rather than just offering an idea or an illustration of how something functions. </p>
+<p>A collection of patterns known as creational design patterns explains how relationships between entities should be constructed. A class can make an instance of another class using the factory pattern without stating the specific class that should be created. At various levels of abstraction, from the low-level specifics of how classes are used to the high-level structuring of entire systems, structural design patterns can be implemented.</p>
+<p>This leads me to my ultimate point: design patterns should be used to save time and energy, not reinvent the wheel with every new project. Instead, use design patterns as a guiding light to help you get started and avoid common pitfalls. By implementing the most popular and appropriate patterns in your projects, you’ll be able to focus on the unique aspects of your application instead of wasting time reinventing the wheel.</p>
+<p>Building systems, machines, and programs are usually done by following some sort of pattern. These patterns are fundamental ways of solving a problem, which you can use again and again by applying just some general rules. One of the biggest benefits of working like this is that you can build similar things from new with a faster learning curve and less risk of failure because you already know the key points and most problems have already been solved.</p>
+<p>There are a lot of things that go into a successful front-end design, and there are even more patterns emerging each year. One should take the time to research these different patterns, and then mix and match them to suit their needs. Whatever you do, just don't be lazy! Reading through several documentation sites, until something sticks, will end in poor results. It may seem like an inordinate amount of work now, but it would save you from paying for it down the road if you simply put forth the effort!</p></div><div class="sc-etbsjb-3 gzmqGV"><div class="sc-1qyjknr-0 eIDbus"><div class="sc-1qyjknr-1 KBFrG"><p>Share:</p></div><div class="sc-1qyjknr-2 eNnZT"><a href="https://twitter.com/share?source=tweetbutton&amp;text=The Most Common Frontend Design Patterns Explained&amp;url=https://www.ramotion.com/blog/frontend-design-patterns" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.6396 14.9965H13.9357L9.34221 8.96325H10.0974L14.6396 14.9965Z" fill="#292728"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M7.06441 3H16.9356C19.1803 3 21 4.82813 21 7.08324V16.9168C21 19.1719 19.1803 21 16.9356 21H7.06441C4.8197 21 3 19.1719 3 16.9168V7.08324C3 4.82813 4.8197 3 7.06441 3ZM15.6514 8.23957H14.3815L12.2887 10.6427L10.4795 8.23957H7.85932L10.99 12.3528L8.0228 15.7601H9.29334L11.5838 13.1313L13.5852 15.7601H16.1407L12.8772 11.4253L15.6514 8.23957Z" fill="#292728"></path></svg></a><a href="https://www.facebook.com/sharer.php?u=https://www.ramotion.com/blog/frontend-design-patterns" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 12.0607C22 6.504 17.5233 2 12 2C6.47667 2 2 6.504 2 12.0607C2 17.0833 5.656 21.2453 10.4373 22V14.9693H7.89867V12.06H10.4373V9.844C10.4373 7.32267 11.93 5.92933 14.2147 5.92933C15.308 5.92933 16.4533 6.126 16.4533 6.126V8.602H15.1913C13.9493 8.602 13.5627 9.378 13.5627 10.174V12.0607H16.336L15.8927 14.9687H13.5627V22C18.344 21.2453 22 17.0833 22 12.0607Z" fill="#292728"></path></svg></a><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.ramotion.com/blog/frontend-design-patterns&amp;title=The Most Common Frontend Design Patterns Explained" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 4.32353V19.6765C21 20.0275 20.8606 20.3641 20.6123 20.6123C20.3641 20.8606 20.0275 21 19.6765 21H4.32353C3.97251 21 3.63586 20.8606 3.38765 20.6123C3.13944 20.3641 3 20.0275 3 19.6765V4.32353C3 3.97251 3.13944 3.63586 3.38765 3.38765C3.63586 3.13944 3.97251 3 4.32353 3H19.6765C20.0275 3 20.3641 3.13944 20.6123 3.38765C20.8606 3.63586 21 3.97251 21 4.32353ZM8.29412 9.88235H5.64706V18.3529H8.29412V9.88235ZM8.53235 6.97059C8.53375 6.77036 8.49569 6.57182 8.42035 6.3863C8.34502 6.20078 8.23387 6.03191 8.09328 5.88935C7.95268 5.74678 7.78537 5.6333 7.60091 5.5554C7.41646 5.47749 7.21846 5.43668 7.01824 5.43529H6.97059C6.5634 5.43529 6.17289 5.59705 5.88497 5.88497C5.59705 6.17289 5.43529 6.5634 5.43529 6.97059C5.43529 7.37777 5.59705 7.76828 5.88497 8.05621C6.17289 8.34413 6.5634 8.50588 6.97059 8.50588C7.17083 8.51081 7.37008 8.47623 7.55696 8.40413C7.74383 8.33202 7.91467 8.2238 8.0597 8.08565C8.20474 7.94749 8.32113 7.78212 8.40223 7.59897C8.48333 7.41582 8.52755 7.21848 8.53235 7.01824V6.97059ZM18.3529 13.2071C18.3529 10.6606 16.7329 9.67059 15.1235 9.67059C14.5966 9.6442 14.0719 9.75644 13.6019 9.9961C13.1318 10.2358 12.7328 10.5945 12.4447 11.0365H12.3706V9.88235H9.88235V18.3529H12.5294V13.8476C12.4911 13.3862 12.6365 12.9283 12.9339 12.5735C13.2313 12.2186 13.6567 11.9954 14.1176 11.9524H14.2182C15.06 11.9524 15.6847 12.4818 15.6847 13.8159V18.3529H18.3318L18.3529 13.2071Z" fill="#292728"></path></svg></a></div></div></div><aside class="sc-texgvn-0 gBWQgc"><h2>Related posts:</h2><article class="sc-9laaq0-19 hkRyuI"><div class="sc-9laaq0-20 fAsfbE">Nov 10, 2022</div><div class="sc-9laaq0-22 jaTTUu"><div class="sc-9laaq0-23 pryet"><a href="/blog/tag/ui-ux-design/">UI/UX Design</a></div><a href="/blog/dark-patterns-in-ux-design/" class="sc-9laaq0-21 eDhJki"><header><h2>Dark patterns in UX design: Why should you avoid them?</h2></header><section><p>What are dark patterns in UX design? Learn about the different types of dark patterns and ways to avoid them in your design projects.</p></section></a><div class="sc-9laaq0-24 fDvTSr"><p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8.75 4C8.75 3.58579 8.41421 3.25 8 3.25C7.58579 3.25 7.25 3.58579 7.25 4V9C7.25 9.41421 7.58579 9.75 8 9.75H12C12.4142 9.75 12.75 9.41421 12.75 9C12.75 8.58579 12.4142 8.25 12 8.25H8.75V4Z" fill="#A8A8A8"></path></svg>12<!-- --> min read</span></p></div></div></article><article class="sc-9laaq0-19 hkRyuI"><div class="sc-9laaq0-20 fAsfbE">Jun 8, 2022</div><div class="sc-9laaq0-22 jaTTUu"><div class="sc-9laaq0-23 pryet"><a href="/blog/tag/ui-ux-design/">UI/UX Design</a></div><a href="/blog/ux-design-patterns/" class="sc-9laaq0-21 eDhJki"><header><h2>Learn About UX Design Patterns: Add Value to Your Projects</h2></header><section><p>What is a UX design pattern? How important are patterns for a design? Learn how to make your designs useful and efficient, with a remarkable experience.</p></section></a><div class="sc-9laaq0-24 fDvTSr"><p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8.75 4C8.75 3.58579 8.41421 3.25 8 3.25C7.58579 3.25 7.25 3.58579 7.25 4V9C7.25 9.41421 7.58579 9.75 8 9.75H12C12.4142 9.75 12.75 9.41421 12.75 9C12.75 8.58579 12.4142 8.25 12 8.25H8.75V4Z" fill="#A8A8A8"></path></svg>17<!-- --> min read</span></p></div></div></article><article class="sc-9laaq0-19 hkRyuI"><div class="sc-9laaq0-20 fAsfbE">Sep 16, 2022</div><div class="sc-9laaq0-22 jaTTUu"><div class="sc-9laaq0-23 pryet"><a href="/blog/tag/web-design/">Web Design</a></div><a href="/blog/web-design-patterns/" class="sc-9laaq0-21 eDhJki"><header><h2>A Detailed Insight and Understanding of Web Design Patterns</h2></header><section><p>What are web design patterns, and why are they important? Learn more about their role in digital spaces, especially in web development and design processes.</p></section></a><div class="sc-9laaq0-24 fDvTSr"><p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8.75 4C8.75 3.58579 8.41421 3.25 8 3.25C7.58579 3.25 7.25 3.58579 7.25 4V9C7.25 9.41421 7.58579 9.75 8 9.75H12C12.4142 9.75 12.75 9.41421 12.75 9C12.75 8.58579 12.4142 8.25 12 8.25H8.75V4Z" fill="#A8A8A8"></path></svg>13<!-- --> min read</span></p></div></div></article><article class="sc-9laaq0-19 hkRyuI"><div class="sc-9laaq0-20 fAsfbE">Jun 24, 2022</div><div class="sc-9laaq0-22 jaTTUu"><div class="sc-9laaq0-23 pryet"><a href="/blog/tag/app-design/">App Design</a></div><a href="/blog/mobile-app-navigation-patterns/" class="sc-9laaq0-21 eDhJki"><header><h2>The Ultimate Guide to Mobile App Navigation Patterns</h2></header><section><p>The curated list of the common and distinctive mobile app navigation patterns. It covers both iOS and Android, with an emphasis on design best practices.</p></section></a><div class="sc-9laaq0-24 fDvTSr"><p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8.75 4C8.75 3.58579 8.41421 3.25 8 3.25C7.58579 3.25 7.25 3.58579 7.25 4V9C7.25 9.41421 7.58579 9.75 8 9.75H12C12.4142 9.75 12.75 9.41421 12.75 9C12.75 8.58579 12.4142 8.25 12 8.25H8.75V4Z" fill="#A8A8A8"></path></svg>13<!-- --> min read</span></p></div></div></article><article class="sc-9laaq0-19 hkRyuI"><div class="sc-9laaq0-20 fAsfbE">Nov 17, 2022</div><div class="sc-9laaq0-22 jaTTUu"><div class="sc-9laaq0-23 pryet"><a href="/blog/tag/app-design/">App Design</a></div><a href="/blog/mobile-app-design-patterns/" class="sc-9laaq0-21 eDhJki"><header><h2>Mobile App Design Patterns to Help You Design Better Apps</h2></header><section><p>Here, you’ll find a collection of the best mobile app design patterns, based on the latest research and UX guidelines, to help you design better apps.</p></section></a><div class="sc-9laaq0-24 fDvTSr"><p><span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8.75 4C8.75 3.58579 8.41421 3.25 8 3.25C7.58579 3.25 7.25 3.58579 7.25 4V9C7.25 9.41421 7.58579 9.75 8 9.75H12C12.4142 9.75 12.75 9.41421 12.75 9C12.75 8.58579 12.4142 8.25 12 8.25H8.75V4Z" fill="#A8A8A8"></path></svg>13<!-- --> min read</span></p></div></div></article></aside></section></article><aside class="sc-9laaq0-29 fFNvcy"><div class="sc-9laaq0-31 iuwQDU"><div class="sc-9laaq0-32 dPoLsb"><div class="sc-9laaq0-34 jdPkNJ"><div class="sc-9laaq0-33 cyoDRY"><div class=" gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:64px;height:64px"><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAApRJREFUOE+NVU1LHEEQfa93VBRxNs5FEJzVZUXJYZcgBPwNm0gOHiTJ3UsCycVTTuaQXEJIfkLizcsmgRyiPyFg1FNC1p0BP0CEzEVlne0O1dlZxnHEPBh6qrvqVXVVdzWRg1KpVASwYIypk6waY0oASHIPwBbJLyQbzWYzytoyOzExMfFYKfUCQEVkY8xlA/ZMfmqtX4Zh+CG9Xkj9O77vv1VKvTLGeLgZnlLqgeu6XhRF3wDoS4RCRvJJEpGM7XYbnU7HfiIXCmn//0Dyruu6t6Io+mrlLtlDkh/TZP39/RgdHbWj4OzsDDs7O/A8DwMDA5dSQVLkR0EQrHFqasrtdDrfAZQThYODAywvL6Ner+Po6MhGJlHu7+9jfX0dh4eHPUcp7JG8o+I4XiDZIxNcXFxgeHgYc3NzdhTjoaEhzM7OYmlpyaYip1iTWusFRfI+ciBGsuWZmRnrQAjiOMb4+DhqtRrOz8+v2JC8pwDUst4SyHylUrF5ky0LlFLo6+uD1vqKLoCaEPq5bF0lMa5Wq1aWXB4fH2N3dxeDg4N5+r66Lro0xsbGUC6XEQQBGo2G3a5EmgVJSA4D/Aemp6exubmJjY0NW6hrEKju3cRNcF0XKysr9j+bP0GXY0si/IwciELW0fz8PFZXVxGGYZ4JjDGfJMKGMUa6SA+O49ijcnp6am9I8slRWlxctEWS9QzZb8dxGrlXT7ZULBbtGcxGKc62t7cRRVGvMExfvUTR9/136eYg5+7k5ARZCIkc+AzZ+yAInlo5pSvt602a9CakyJ4DiGUu3Y+0tKCRkZGmUuo2SS+v+kmxSP7SWj8Lw/B10gvt+hULANKBjDH2CehezUnJO8mWMeaHPAFSzFar9Sdr/BfyVz4Z5eogTwAAAABJRU5ErkJggg==" alt="Ramotion" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="https://www.datocms-assets.com/48294/1616163602-ramotion-logo-dark.png?auto=format&dpr=1&h=64&w=64 1x,
+https://www.datocms-assets.com/48294/1616163602-ramotion-logo-dark.png?auto=format&dpr=1.5&h=64&w=64 1.5x,
+https://www.datocms-assets.com/48294/1616163602-ramotion-logo-dark.png?auto=format&dpr=2&h=64&w=64 2x,
+https://www.datocms-assets.com/48294/1616163602-ramotion-logo-dark.png?auto=format&dpr=3&h=64&w=64 3x" /><img loading="lazy" width="64" height="64" srcset="https://www.datocms-assets.com/48294/1616163602-ramotion-logo-dark.png?auto=format&dpr=1&h=64&w=64 1x,
+https://www.datocms-assets.com/48294/1616163602-ramotion-logo-dark.png?auto=format&dpr=1.5&h=64&w=64 1.5x,
+https://www.datocms-assets.com/48294/1616163602-ramotion-logo-dark.png?auto=format&dpr=2&h=64&w=64 2x,
+https://www.datocms-assets.com/48294/1616163602-ramotion-logo-dark.png?auto=format&dpr=3&h=64&w=64 3x" src="https://www.datocms-assets.com/48294/1616163602-ramotion-logo-dark.png?auto=format&h=64&w=64" alt="Ramotion" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div></div><span>Ramotion</span></div><div class="sc-9laaq0-35 gLluSr"><div><p>Ramotion is an award winning design agency with more than 10 years of experience in the industry. The team designed Firefox logo, Bitmoji by Snapchat and lot of other famous brands. In addition to brand identity design, Ramotion provides UI/UX, develop websites and apps.</p></div><div class="sc-9laaq0-36 djNrIW"><p><a href="https://www.linkedin.com/company/ramotion/">LinkedIn</a><a href="https://twitter.com/ramotion">Twitter</a><a href="https://www.instagram.com/ramotion/">Instagram</a><a href="https://www.facebook.com/Ramotion/">Facebook</a></p></div></div></div></div><div class="sc-etbsjb-0 kKxzWm"><div class="sc-jp1w58-0 kfwOXV"><form id='contact-form-aside' method='POST' name='blog-contact-form'><input type="hidden" name="form-name" value="blog-contact-form"/><div class="sc-jp1w58-1 iTPEMZ aside"><div><h3>Partner with us</h3><p>Unlock your business potential with our committed team driving your success.</p></div><div class="sc-jp1w58-2 biRQyk"><label><input type="text" name="first-name" placeholder="Name" required=""/></label><label><input type="text" name="job-title" placeholder="Job Title" required=""/></label><label><input type="email" name="email" placeholder="Company email" required=""/></label><input type="hidden" name="last-name" value=""/><input type="hidden" name="source" value="blog/article"/><input type="hidden" name="campaign" value="aside-cta-widget"/><input type="hidden" name="conversion-page" value="/blog/frontend-design-patterns"/><button type="submit" class="full-width">Contact us</button></div></div></form></div><div class="sc-9laaq0-30 bGnqXE"><div class="sc-rgai7o-0 cYNTMn"><div class="sc-rgai7o-1 iJkLnY"><span data-tab-index="0" class="active">Popular</span><span data-tab-index="1" class="">Agency</span></div><div class="sc-rgai7o-2 bZejZN"><ul data-tab-index="0" class="active"><li><a href="https://www.ramotion.com/blog/web-developer-portfolios/"><svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 4L3.49691e-07 8L0.5 4L0 2.18557e-07L5 4Z" fill="#A8A8A8"></path></svg>Web Developer Portfolios</a></li><li><a href="https://www.ramotion.com/blog/what-is-a-web-application/"><svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 4L3.49691e-07 8L0.5 4L0 2.18557e-07L5 4Z" fill="#A8A8A8"></path></svg>What is Web Application</a></li><li><a href="https://www.ramotion.com/blog/hire-developers-for-startup/"><svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 4L3.49691e-07 8L0.5 4L0 2.18557e-07L5 4Z" fill="#A8A8A8"></path></svg>Hire developers for Startup</a></li><li><a href="https://www.ramotion.com/blog/responsive-web-application-development/"><svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 4L3.49691e-07 8L0.5 4L0 2.18557e-07L5 4Z" fill="#A8A8A8"></path></svg>Responsive Web App Development</a></li></ul><ul data-tab-index="1" class=""><li><a href="https://www.ramotion.com/web-app-development/"><svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 4L3.49691e-07 8L0.5 4L0 2.18557e-07L5 4Z" fill="#A8A8A8"></path></svg>Web App Development Agency</a></li><li><a href="https://www.ramotion.com/startup-app-development/"><svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 4L3.49691e-07 8L0.5 4L0 2.18557e-07L5 4Z" fill="#A8A8A8"></path></svg>Web App Development Agency for Startups</a></li><li><a href="https://www.ramotion.com/web-app-development-san-francisco/"><svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 4L3.49691e-07 8L0.5 4L0 2.18557e-07L5 4Z" fill="#A8A8A8"></path></svg>Web App Development Agency in San Francisco</a></li><li><a href="https://www.ramotion.com/web-app-development-los-angeles/"><svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 4L3.49691e-07 8L0.5 4L0 2.18557e-07L5 4Z" fill="#A8A8A8"></path></svg>Web App Development Agency in Los Angeles</a></li><li><a href="https://www.ramotion.com/web-app-development-new-york/"><svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 4L3.49691e-07 8L0.5 4L0 2.18557e-07L5 4Z" fill="#A8A8A8"></path></svg>Web App Development Agency in New York</a></li></ul></div></div></div></div></aside></div></div><div class="sc-9laaq0-2 bKnDjH"><article class="sc-9laaq0-8 iMCepu"><div class="sc-jp1w58-0 kfwOXV"><form id='contact-form-footer' method='POST' name='blog-contact-form'><input type="hidden" name="form-name" value="blog-contact-form"/><div class="sc-jp1w58-1 iTPEMZ"><div><h3>Unlock your business potential with us</h3><p>Empower your business with tailored strategy, innovative design, and seamless development. Ready to take your company to the next level?</p></div><div class="sc-jp1w58-2 biRQyk"><label><input type="text" name="first-name" placeholder="Name" required=""/></label><label><input type="text" name="job-title" placeholder="Job Title" required=""/></label><label><input type="email" name="email" placeholder="Company email" required=""/></label><input type="hidden" name="last-name" value=""/><input type="hidden" name="source" value="blog/article"/><input type="hidden" name="campaign" value="footer-cta-widget"/><input type="hidden" name="conversion-page" value="/blog/frontend-design-patterns"/><button type="submit" class="">Contact us</button></div></div></form></div></article></div></main><footer class="sc-1459zsh-0 dAHMhL"><nav class="sc-1459zsh-2 iTydUz"><div><strong>Portfolio</strong><ul><li><a href="https://www.awwwards.com/Ramotion/">Awwwards</a></li><li><a href="https://dribbble.com/ramotion">Dribbble</a></li><li><a href="https://www.behance.net/Ramotion">Bēhance</a></li><li><a href="https://github.com/ramotion">GitHub</a></li></ul></div><div><strong>Social media</strong><ul><li><a href="https://www.linkedin.com/company/ramotion/">LinkedIn</a></li><li><a href="https://x.com/ramotion">X.com</a></li><li><a href="https://www.instagram.com/ramotion/">Instagram</a></li><li><a href="https://www.facebook.com/Ramotion/">Facebook</a></li></ul></div><div><strong>Locations</strong><ul><li><a href="https://www.ramotion.com/digital-product-agency-san-francisco/">San Francisco, CA</a></li><li><a href="https://www.ramotion.com/digital-product-agency-los-angeles/">Los Angeles, CA</a></li><li><a href="https://www.ramotion.com/digital-product-agency-new-york/">New York, NY</a></li></ul></div><div><strong>Contact</strong><ul><li><a href="tel:+14158317880">+1 415 831 7880</a></li><li><a href="https://www.ramotion.com/contact/">Contact us</a></li></ul></div><div><strong>Legal</strong><ul><li><a href="https://www.ramotion.com/privacy-policy/">Privacy policy</a></li><li><a href="https://www.ramotion.com/terms-of-use/">Terms of use</a></li><li><a href="https://www.ramotion.com/cookie-policy/">Cookie policy</a></li><li><a href="https://www.ramotion.com/sitemap/">Sitemap</a></li></ul></div></nav><div class="sc-1459zsh-1 jTAjgN"><p>© 2024 <a href="https://www.ramotion.com/">Ramotion</a></p></div></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-18133791-9', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script src="https://jscloud.net/x/19936/inlinks.js"></script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/frontend-design-patterns/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-2b152592ed7f0445f2f9.js"],"app":["/app-673598a3907a4a377bb0.js"],"component---src-pages-404-js":["/component---src-pages-404-js-cb66e4e84f63f4708477.js"],"component---src-templates-authors-js":["/component---src-templates-authors-js-a4f4181e38ad5c86b606.js"],"component---src-templates-blog-list-js":["/component---src-templates-blog-list-js-bc33282f488ca12a1125.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-12b8701d1645a9f9caa1.js"],"component---src-templates-tags-js":["/component---src-templates-tags-js-32e5150d02cf396af0c8.js"]};/*]]>*/</script><script src="/blog/polyfill-2b152592ed7f0445f2f9.js" nomodule=""></script><script src="/blog/component---src-templates-blog-post-js-12b8701d1645a9f9caa1.js" async=""></script><script src="/blog/66f62df6fa27bfcb7e17e248d5ac90e5d7e55346-02138acb098fff078a7a.js" async=""></script><script src="/blog/app-673598a3907a4a377bb0.js" async=""></script><script src="/blog/styles-755093da0c07f4b49226.js" async=""></script><script src="/blog/framework-8e528b732ab2eaadb7b7.js" async=""></script><script src="/blog/webpack-runtime-0ad7b3f700f1b1ef5e4b.js" async=""></script></body></html>
